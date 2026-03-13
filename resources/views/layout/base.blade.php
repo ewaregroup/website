@@ -45,88 +45,264 @@
     <!-- bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Vite Scripts & Tailwind -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    <style>
+        [x-cloak] { display: none !important; }
+
+        :root {
+            --page-bg: #f6f8fb;
+            --page-text: #0b0b0b;
+            --page-muted: rgba(0, 0, 0, 0.65);
+            --partner-bg: #f6f8fb;
+            --partner-text: #0b0b0b;
+            --partner-muted: rgba(0, 0, 0, 0.6);
+            --partner-card-bg: rgba(255, 255, 255, 0.9);
+            --partner-card-border: rgba(0, 0, 0, 0.08);
+            --about-card-bg: #ffffff;
+            --about-card-border: rgba(0, 0, 0, 0.06);
+            --hero-overlay: rgba(0, 0, 0, 0.45);
+            --hero-pill-bg: rgba(255, 255, 255, 0.2);
+            --hero-pill-border: rgba(255, 255, 255, 0.45);
+            --feature-card-bg: #ffffff;
+            --feature-card-border: rgba(0, 0, 0, 0.06);
+            --feature-title: #0b0b0b;
+            --feature-text: rgba(0, 0, 0, 0.7);
+            --footer-bg: #f1f5f2;
+            --footer-text: #0b0b0b;
+            --footer-muted: rgba(0, 0, 0, 0.6);
+            --footer-card-bg: rgba(255, 255, 255, 0.85);
+            --footer-card-border: rgba(0, 0, 0, 0.08);
+        }
+
+        :root[data-theme="dark"] {
+            --page-bg: #0b1511;
+            --page-text: #f5f7f5;
+            --page-muted: rgba(255, 255, 255, 0.7);
+            --partner-bg: #0b1511;
+            --partner-text: #ffffff;
+            --partner-muted: rgba(255, 255, 255, 0.7);
+            --partner-card-bg: rgba(255, 255, 255, 0.06);
+            --partner-card-border: rgba(255, 255, 255, 0.12);
+            --about-card-bg: rgba(255, 255, 255, 0.06);
+            --about-card-border: rgba(255, 255, 255, 0.12);
+            --hero-overlay: rgba(0, 0, 0, 0.55);
+            --hero-pill-bg: rgba(255, 255, 255, 0.12);
+            --hero-pill-border: rgba(255, 255, 255, 0.25);
+            --feature-card-bg: rgba(255, 255, 255, 0.08);
+            --feature-card-border: rgba(255, 255, 255, 0.12);
+            --feature-title: #ffffff;
+            --feature-text: rgba(255, 255, 255, 0.7);
+            --footer-bg: #0b1511;
+            --footer-text: #ffffff;
+            --footer-muted: rgba(255, 255, 255, 0.7);
+            --footer-card-bg: rgba(255, 255, 255, 0.1);
+            --footer-card-border: rgba(255, 255, 255, 0.12);
+        }
+
+        body {
+            background: var(--page-bg);
+            color: var(--page-text);
+            transition: background 250ms ease, color 250ms ease;
+        }
+
+        .theme-toggle {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            color: #0b0b0b;
+            transition: transform 200ms ease, background 200ms ease, border-color 200ms ease, color 200ms ease;
+        }
+
+        :root[data-theme="dark"] .theme-toggle {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+
+        .nav-link {
+            color: var(--page-text);
+        }
+
+        .nav-link:hover {
+            color: #0c7c34;
+        }
+
+        .nav-dropdown {
+            background: var(--page-bg);
+            border: 1px solid var(--about-card-border);
+        }
+
+        :root[data-theme="dark"] .nav-dropdown {
+            background: #0b1511;
+            border-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .nav-dropdown-link {
+            display: block;
+            padding: 10px 12px;
+            border-radius: 12px;
+            color: var(--page-text);
+            font-size: 15px;
+            transition: background 180ms ease, color 180ms ease;
+        }
+
+        .nav-dropdown-link:hover {
+            background: rgba(12, 124, 52, 0.12);
+            color: #0c7c34;
+        }
+
+        .cta-link {
+            color: var(--page-text);
+            border-color: rgba(0, 0, 0, 0.2);
+        }
+
+        :root[data-theme="dark"] .cta-link {
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .mobile-menu-panel {
+            background: rgba(255, 255, 255, 0.95);
+            border-color: rgba(0, 0, 0, 0.08);
+        }
+
+        :root[data-theme="dark"] .mobile-menu-panel {
+            background: rgba(11, 21, 17, 0.95);
+            border-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .mobile-menu-link {
+            color: var(--page-text);
+        }
+
+        .mobile-menu-link:hover {
+            color: #0c7c34;
+        }
+
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 600ms ease, transform 600ms ease;
+        }
+
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 80ms; }
+        .reveal-delay-2 { transition-delay: 160ms; }
+        .reveal-delay-3 { transition-delay: 240ms; }
+        .reveal-delay-4 { transition-delay: 320ms; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal-on-scroll {
+                transition: none;
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
 </head>
-<!-- Start-Top-header-->
-<div class="top-header"  style="background-color: #0b3f0f; ">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <div class="top-header-infor">
-                    <ul>
-                        <li><i class="fas fa-envelope"></i><a href="esawaregroup@gmail.com">info@ewaregroup.org</a></li>
-                        <li><i class="fas fa-map-marker-alt"></i>Derrière le GEG Baguida Centre</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="top-header-social-icon">
-                    <ul>
-                        <li><a href="https://www.facebook.com/profile.php?id=100091571177563 " target="_blank"><i class="fab fa-facebook-f" style="color: dodgerblue;"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-x-twitter"style="color:white"></i></a></li>
-                        <li><a href="https://www.linkedin.com/company/eware-group-electrical-work-and-renewable-energy-group/?viewAsMember=true" target="_blank"><i class="fab fa-linkedin-in" style="color: dodgerblue;"></i></a></li>
-                        <li><a href="https://www.youtube.com/channel/UChb6Gi0PuQ5u-DxErIoO3mw " target="_blank"><i class="fa-brands fa-youtube" style="color:red "></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End-Top-bar-Area -->
+<body
+    class="font-sans antialiased"
+    x-data="{
+        scrolled: false,
+        theme: localStorage.getItem('theme') || 'light'
+    }"
+    x-init="
+        document.documentElement.setAttribute('data-theme', theme);
+        $watch('theme', value => {
+            document.documentElement.setAttribute('data-theme', value);
+            localStorage.setItem('theme', value);
+        });
+    "
+    @scroll.window="scrolled = (window.pageYOffset > 50)"
+>
 
 <!-- Start-header-Menu-->
-<div id="sticky-header"  class="header-area">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-2">
-                <div class="header-logo">
-                    <a href="{{url('/')}}"><img src="{{url('assets/images/logo/logo2.jpg')}}" width="120"  alt="logo"></a>
-                </div>
-            </div>
-            <div class="col-lg-7">
-                <div class="header-menu">
-                    <ul class="nav_scroll">
-                        <li class="menu-item-has-children"><a href="{{url('/')}}">Accueil</a></li>
-                        <li><a href="{{url('apropos')}}">A propos</a></li>
-                        <li class="menu-item-has-children"><a href="{{url('services')}}">Services</a>
-                        </li>
-                        <li ><a href="{{url('shop')}}">Porfolio</a></li>
-                        <li><a href="{{url('publication')}}">Publications</a></li>
-                        <li><a href="{{url('contact')}}">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 d-flex header-button">
-                <a class="btn mx-2" target="_blank" href="https://wa.me/92405748/">
-                    <i class="fa-brands fa-whatsapp fa-1x mr-1"></i>
-                    <span style="margin-right: 5px;">WhatsApp</span>
+<header
+    :class="scrolled ? 'fixed top-3 left-0 right-0 z-50 mx-auto max-w-7xl px-4' : 'fixed top-0 left-0 right-0 z-50 w-full'"
+    class="transition-all duration-300 ease-in-out"
+>
+    <!-- Glassy Navbar -->
+    <div
+        :class="scrolled ? 'bg-white/30 backdrop-blur-md rounded-2xl md:rounded-[24px] px-6 py-2 md:px-10 border border-white/20 shadow-xl' : 'bg-transparent px-6 py-4 md:px-16 border-b border-white/10'"
+        class="flex items-center justify-between transition-all duration-300"
+    >
+
+        <!-- Logo -->
+        <a href="{{url('/')}}" class="flex items-center shrink-0">
+            <img src="{{url('assets/images/logo/logo_cb.png')}}" class=" h-10 md:h-12 w-auto p-1" alt="logo">
+            {{-- <img src="{{url('assets/images/logo/logo2.jpg')}}" class="h-8 md:h-11 w-auto rounded-lg bg-white/50 p-1" alt="logo"> --}}
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center space-x-10">
+            <a href="{{url('/')}}" class="nav-link text-[16px] xl:text-[20px] font-medium transition">Accueil</a>
+            <a href="{{url('filiales')}}" class="nav-link text-[16px] xl:text-[20px] font-medium transition">Filiales</a>
+            <a href="{{url('services')}}" class="nav-link text-[16px] xl:text-[20px] font-medium transition">Nos solutions</a>
+            <a href="{{url('publication')}}" class="nav-link text-[16px] xl:text-[20px] font-medium transition">Nos actions</a>
+            {{-- <div class="relative group">
+                <a href="{{url('shop')}}" class="nav-link text-[16px] xl:text-[20px] font-medium transition inline-flex items-center gap-2">
+                    Nos actions <i class="fas fa-chevron-down text-xs"></i>
                 </a>
-                <a id="powerButton" class="btn ms-4" style="background-color: #e79020; border-color: orange" href="{{url('menusolsizer')}}">
-                    <i class="fa fa-power-off fa-1x"></i>
-                </a>
+                <div class="nav-dropdown absolute left-0 mt-3 min-w-[220px] rounded-2xl p-2 shadow-xl opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition">
+                    <a href="{{url('shop')}}" class="nav-dropdown-link">Boutique</a>
+                    <a href="{{url('publication')}}" class="nav-dropdown-link">Publications</a>
+                </div>
+            </div> --}}
+            <a href="{{url('contact')}}" class="nav-link text-[16px] xl:text-[20px] font-medium transition">Contact</a>
+        </nav>
+
+        <!-- CTA Buttons -->
+        <div class="hidden lg:flex items-center ">
+            <a target="_blank" href="https://wa.me/92405748/" class="cta-link flex items-center justify-center px-6 py-2 rounded-full border hover:bg-white/30 transition text-[16px] md:text-[18px]">
+                WhatsApp
+            </a>
+            {{-- <button
+                @click="theme = theme === 'dark' ? 'light' : 'dark'"
+                class="theme-toggle rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center hover:scale-110 shadow-md"
+                aria-label="Basculer le theme"
+            >
+                <i class="fa-solid fa-moon text-lg md:text-xl" x-show="theme === 'light'" x-cloak></i>
+                <i class="fa-solid fa-sun text-lg md:text-xl" x-show="theme === 'dark'" x-cloak></i>
+            </button> --}}
+            <a class="bg-secondary text-white flex items-center justify-center px-6 py-2 rounded-full border md:w-12 md:h-auto transition hover:scale-110 shadow-md">
+                <i class="fa fa-power-off text-lg md:text-xl"></i> Solsizer
+            </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="lg:hidden flex items-center" x-data="{ mobileMenuOpen: false }">
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-black hover:text-primary focus:outline-none">
+                <i class="fas fa-bars text-3xl"></i>
+            </button>
+
+            <!-- Mobile Menu Dropdown -->
+            <div x-show="mobileMenuOpen" @click.away="mobileMenuOpen = false" class="mobile-menu-panel absolute top-full left-0 right-0 mt-4 backdrop-blur-lg rounded-2xl shadow-xl border p-6 flex flex-col space-y-4" style="display: none;">
+                <a href="{{url('/')}}" class="mobile-menu-link text-xl">Accueil</a>
+                <a href="{{url('filiales')}}" class="mobile-menu-link text-xl">Filiales</a>
+                <a href="{{url('services')}}" class="mobile-menu-link text-xl">Nos solutions</a>
+                <a href="{{url('shop')}}" class="mobile-menu-link text-xl">Nos actions</a>
+                <a href="{{url('publication')}}" class="mobile-menu-link text-xl">Publications</a>
+                <a href="{{url('contact')}}" class="mobile-menu-link text-xl">Contact</a>
+                <a target="_blank" href="https://wa.me/92405748/" class="mobile-menu-link text-xl flex items-center"><i class="fa-brands fa-whatsapp mr-2 text-green-500"></i> WhatsApp</a>
+                <button
+                    @click="theme = theme === 'dark' ? 'light' : 'dark'"
+                    class="theme-toggle rounded-xl px-4 py-3 flex items-center justify-between text-base font-medium"
+                    aria-label="Basculer le theme"
+                >
+                    <span x-text="theme === 'dark' ? 'Mode clair' : 'Mode sombre'"></span>
+                    <i class="fa-solid fa-moon" x-show="theme === 'light'" x-cloak></i>
+                    <i class="fa-solid fa-sun" x-show="theme === 'dark'" x-cloak></i>
+                </button>
             </div>
         </div>
     </div>
-</div>
-{{--<!--==================================================-->--}}
-{{--<!-- Start-Mobile-Menu-->--}}
-{{--<!--==================================================-->--}}
-<div class="mobile-menu-area d-sm-block d-md-block d-lg-none">
-    <div class="mobile-menu">
-        <nav class="header-menu" style="display: block;">
-            <ul class="nav_scroll">
-                <li class="menu-item-has-children"><a href="{{url('/')}}">Accueil</a></li>
-                <li><a href="{{url('apropos')}}">A propos</a></li>
-                <li class="menu-item-has-children"><a href="{{url('services')}}">Services</a></li>
-                <li ><a href="{{url('shop')}}">Portfolio</a></li>
-                <li><a href="{{url('publication')}}">Publications</a></li>
-                <li><a href="{{url('contact')}}">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</div>
-{{--<!--==================================================-->--}}
-{{--<!-- End-Mobile-Menu-->--}}
-{{--<!--==================================================-->--}}
+</header>
+<!-- End-header-Menu-->
 
 
 @yield('content')
@@ -135,126 +311,140 @@
 <!--==================================================-->
 <!-- Start-Footer-section-->
 <!--==================================================-->
-        <div class="footer-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-logo">
-                            <a href="{{url('/')}}"><img src="{{url('assets/images/logo/eware-logo.png')}}" alt="logo"></a>
-                        </div>
-                        <div class="footer-widget-desc">
-                            <p>"We are the better future !"</p>
-                        </div>
-                        <div class="footer-socail-ion">
-                            <ul>
-                                <li><a href="https://www.facebook.com/profile.php?id=100091571177563 " target="_blank"><i class="fab fa-facebook-f fa-5x" style="color: dodgerblue;"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fa-brands fa-x-twitter fa-5x"></i></a></li>
-                                <li><a href="https://www.linkedin.com/company/eware-group-electrical-work-and-renewable-energy-group/?viewAsMember=true"  style="color: dodgerblue;" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                                <li><a href="https://www.youtube.com/channel/UChb6Gi0PuQ5u-DxErIoO3mw " target="_blank"><i class="fa-brands fa-youtube" style="color:red"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-widget-content">
-                            <div class="footer-widget-title">
-                                <h4>Quick link</h4>
-                            </div>
-                            <div class="footer-widget-menu">
-                                <ul>
-                                    <li><a href="{{url('/')}}">Home</a></li>
-                                    <li><a href="{{url('apropos')}}">About</a></li>
-                                    <li><a href="{{url('services')}}">Service</a></li>
-                                    <li><a href="{{url('shop')}}">Boutique</a></li>
-                                    <li><a href="{{url('publication')}}">Publication</a></li>
-                                    <li><a href="{{url('contact')}}">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-widget-content">
-                            <div class="footer-widget-title">
-                                <h4>Quick Contact</h4>
-                            </div>
-                            <div class="footer-contact" style="color: white">
-                                <div class="footer-contact-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="footer-contact-content">
-                                    <h4>Location</h4>
-                                    <p>13 BP 93, Derrière le GEG Baguida centre</p>
-                                </div>
-                            </div>
-                            <div class="footer-contact" style="color: white">
-                                <div class="footer-contact-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="footer-contact-content">
-                                    <h4>Email </h4>
-                                    <p>info@ewaregroup.org</p>
-                                </div>
-                            </div>
-                            <div class="footer-contact" style="color: white">
-                                <div class="footer-contact-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div class="footer-contact-content" >
-                                    <h4>Phone </h4>
-                                    <p>+228 92 40 57 48</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-widget-content">
-                            <div class="footer-widget-title">
-                                <h4>S'inscrire maintenant</h4>
-                            </div>
-                            <div class="footer-widget-desc-2">
+<footer class="relative theme-footer pt-20 pb-12 z-10 w-full overflow-hidden">
+    <div class="absolute -top-40 right-0 w-[420px] h-[420px] bg-secondary/15 rounded-full blur-[140px] pointer-events-none" aria-hidden="true"></div>
+    <div class="absolute -bottom-48 -left-24 w-[520px] h-[520px] bg-primary/20 rounded-full blur-[160px] pointer-events-none" aria-hidden="true"></div>
 
-                                <p>Venez avec nous ! Pour plus d'informations aimables</p>
-                            </div>
-                            <form method="POST" >
-                                @csrf
-                                <div class="newsletter-box">
-                                    <input type="Email" name="email" placeholder="Subscribe with us" >
-                                    @error('email')
-                                    <p class="text-danger">{{ $message }}</p>
-                                    @enderror
-                                </div>
-                                <div class="newsletter-submit-button">
-                                    <button type="submit">Subscribe</button>
-                                </div>
-                            </form>
-                            <div class="footer-widget-title">
-                                <h4>" Soutenir la Start-up ! "</h4>
-                            </div>
-                            <div class="footer-card-ion">
-                                <ul>
-                                    <li><a href="{{('paiement')}}"  style="width:10px" target="_blank"><img src="{{url('assets/images/Paiement/tmoney.png')}}"  alt="logo"></a></li>
-                                    <li><a href="{{('paiement')}}"  style="width:30px" target="_blank"><img src="{{url('assets/images/Paiement/flooz.png')}}"  alt="logo"></a></li>
-                                    <li><a href="{{('paiement')}}"  style="width:40px" target="_blank"><img src="{{url('assets/images/Paiement/card.png')}}"  alt="logo"></a></li>
-                                    <li><a href="{{('paiement')}}"  style="width:50px" target="_blank"><img src="{{url('assets/images/Paiement/visa.png')}}"  alt="logo"></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="max-w-[1728px] mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+            <div class="lg:col-span-3 reveal-on-scroll">
+                <h4 class="footer-label text-[12px] tracking-[0.3em] uppercase">Quick links</h4>
+                <ul class="mt-6 space-y-3">
+                    <li><a href="{{url('/')}}" class="footer-link text-[16px] transition">Accueil</a></li>
+                    <li><a href="{{url('apropos')}}" class="footer-link text-[16px] transition">A propos</a></li>
+                    <li><a href="{{url('services')}}" class="footer-link text-[16px] transition">Services</a></li>
+                    <li><a href="{{url('shop')}}" class="footer-link text-[16px] transition">Boutique</a></li>
+                    <li><a href="{{url('publication')}}" class="footer-link text-[16px] transition">Publications</a></li>
+                    <li><a href="{{url('contact')}}" class="footer-link text-[16px] transition">Contact</a></li>
+                </ul>
             </div>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <div class="copyright-area">
-                            <p>© 2024 <a href="{{url('/')}}" style="color: white"> Eware Group </a></p>
+
+            <div class="lg:col-span-4 reveal-on-scroll reveal-delay-1">
+                <h4 class="footer-label text-[12px] tracking-[0.3em] uppercase">Contact</h4>
+                <ul class="mt-6 space-y-5">
+                    <li class="flex items-start gap-4">
+                        <div class="footer-icon w-[46px] h-[46px] rounded-full flex shrink-0 items-center justify-center">
+                            <i class="fas fa-map-marker-alt text-lg"></i>
                         </div>
-                    </div>
+                        <div class="flex flex-col gap-1">
+                            <h5 class="text-[16px] font-semibold m-0 p-0 leading-none">Adresse</h5>
+                            <p class="footer-muted text-[14px] leading-snug">13 BP 93, Derriere le GEG Baguida centre</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="footer-icon w-[46px] h-[46px] rounded-full flex shrink-0 items-center justify-center">
+                            <i class="fas fa-envelope text-lg"></i>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <h5 class="text-[16px] font-semibold m-0 p-0 leading-none">Email</h5>
+                            <a href="mailto:info@ewaregroup.org" class="footer-link footer-muted text-[14px] transition">info@ewaregroup.org</a>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="footer-icon w-[46px] h-[46px] rounded-full flex shrink-0 items-center justify-center">
+                            <i class="fas fa-phone text-lg"></i>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <h5 class="text-[16px] font-semibold m-0 p-0 leading-none">Telephone</h5>
+                            <a href="tel:+22892405748" class="footer-link footer-muted text-[14px] transition">+228 92 40 57 48</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="lg:col-span-5 reveal-on-scroll reveal-delay-2">
+                <div class="footer-card rounded-3xl p-8 sm:p-10 shadow-[0_18px_45px_rgba(0,0,0,0.25)] backdrop-blur-sm">
+                    <h4 class="footer-title text-[22px] font-semibold">S'inscrire maintenant</h4>
+                    <p class="footer-muted text-[15px] mt-3 max-w-md">Recevez nos actualites et opportunites directement par email.</p>
+
+                    <form method="POST" class="mt-6 flex flex-col gap-4">
+                        @csrf
+                        <div class="relative w-full">
+                            <input type="email" name="email" placeholder="Votre email" class="footer-input w-full rounded-[14px] px-5 py-4 text-[15px] focus:outline-none focus:ring-4 focus:ring-primary/40 border-none shadow-sm placeholder-gray-500" required>
+                        </div>
+                        <button type="submit" class="w-full sm:w-auto bg-primary hover:bg-green-800 text-white font-semibold text-[15px] rounded-[14px] px-6 py-4 transition shadow-lg">
+                            S'inscrire
+                        </button>
+                        @error('email')
+                            <p class="text-red-200 text-sm mt-1">{{ $message }}</p>
+                        @enderror
+                    </form>
                 </div>
             </div>
         </div>
-        <!--==================================================-->
-        <!-- End-Footer-section-->
-        <!--==================================================-->
 
+        <div class="mt-16 pt-6 border-t footer-divider text-center reveal-on-scroll reveal-delay-3">
+            <p class="footer-muted text-sm">&copy; {{ date('Y') }} <a href="{{url('/')}}" class="footer-link transition font-medium">Eware Group</a>. Tous droits reserves.</p>
+        </div>
+    </div>
+
+    <style>
+        .theme-footer {
+            background: var(--footer-bg);
+            color: var(--footer-text);
+            transition: background 250ms ease, color 250ms ease;
+        }
+
+        .footer-label {
+            color: var(--footer-muted);
+        }
+
+        .footer-muted {
+            color: var(--footer-muted);
+        }
+
+        .footer-link {
+            color: var(--footer-muted);
+        }
+
+        .footer-link:hover {
+            color: #f38c2d;
+        }
+
+        .footer-icon {
+            background: rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        :root[data-theme="dark"] .footer-icon {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .footer-card {
+            background: var(--footer-card-bg);
+            border: 1px solid var(--footer-card-border);
+        }
+
+        .footer-input {
+            background: #ffffff;
+            color: #0b0b0b;
+        }
+
+        :root[data-theme="dark"] .footer-input {
+            background: rgba(255, 255, 255, 0.95);
+            color: #0b0b0b;
+        }
+
+        .footer-divider {
+            border-color: var(--footer-card-border);
+        }
+
+    </style>
+</footer>
+<!--==================================================-->
+<!-- End-Footer-section-->
+<!--==================================================-->
         <!--==================================================-->
         <!-- Start Search Popup Section -->
         <!--==================================================-->
@@ -275,9 +465,10 @@
         <!--==================================================-->
         <!-- Start scrollup section Section -->
         <!--==================================================-->
-        <div class="prgoress_indicator active-progress">
-
-            <a target="_blank"  href="https://wa.me/92405748/"><i class="fa-brands fa-whatsapp fa-2x" style="color: white; background-color: rgb(11,63,15); border-radius: 50px; padding: 15px"></i></a>
+        <div class="fixed bottom-6 right-6 z-50">
+            <a target="_blank" href="https://wa.me/92405748/" class="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-lg hover:bg-green-800 hover:scale-110 transition duration-300">
+                <i class="fa-brands fa-whatsapp text-3xl"></i>
+            </a>
         </div>
         <!--==================================================-->
         <!-- Start scrollup section Section -->

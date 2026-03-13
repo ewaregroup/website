@@ -1,199 +1,388 @@
 @extends('layout.base')
 @section('content')
 
+    <!--==================================================-->
     <!-- Start-Hero-section-->
     <!--==================================================-->
-    <div class="hero-section align-items-center d-flex">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-12 text-center">
-                    <div class="hero-content">
-                        <h4>Welcome </h4>
-                        <h1>Optez pour l'efficacité énergetique !</h1>
-                        <p class="hero-desc">
-                            Economisez de l'argent en optant pour nos solutions. </p>
-                        <div class="solar-button">
-                            <a href="{{url('shop')}}">Nos Solutions<i class="fas fa-plus"></i></a>
-                        </div>
-                    </div>
+    <div class="relative w-full min-h-[840px] overflow-hidden flex items-center justify-start flex-col pt-32 sm:pt-24 hero-section">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="{{url('assets/images/accueil/head.jpg')}}" alt="Background" class="w-full h-full object-cover object-center">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 w-full max-w-[1728px] mx-auto px-6 sm:px-10 mb-8 lg:px-44">
+            <div class="max-w-[626px] flex flex-col items-start gap-8 mt-10 text-left">
+                <!-- Welcom Pill -->
+                <div class="hero-pill inline-flex items-center gap-4 px-6 py-2 rounded-full backdrop-blur-[2px]">
+                    <span class="w-[15px] h-[15px] bg-secondary rounded-full"></span>
+                    <span class="text-white text-[25px] font-normal leading-none pt-1">Welcome</span>
                 </div>
+
+                <h1 class="hero-text text-[40px] sm:text-[55px] font-bold leading-tight m-0">
+                    Optez pour l'efficacité <br/>énergétique !
+                </h1>
+
+                <p class="hero-text text-[20px] sm:text-[25px] font-normal m-0">
+                    Economisez de l'argent en optant pour nos solutions.
+                </p>
+
+                <a href="{{url('shop')}}" class="inline-flex justify-center items-center px-10 py-3.5 bg-primary hover:bg-[#0A6B2D] hover:shadow-[0_8px_30px_rgb(12,124,52,0.4)] rounded-[12px] hover:scale-105 transition-all duration-300 shadow-lg mt-4 w-fit group">
+                    <span class="text-white text-[18px] sm:text-[22px] font-bold">Nos solutions</span>
+                    <i class="fas fa-arrow-right ml-3 text-white transition-transform duration-300 group-hover:translate-x-2"></i>
+                </a>
             </div>
+        </div>
+
+        <!-- SVG Bottom Curve -->
+        <div class="absolute bottom-0 left-0 w-full z-10 leading-none">
+            <img x-show="theme !== 'dark'" x-cloak src="{{url('assets/images/svg/header.svg')}}" alt="Curve" class="w-full h-auto object-cover">
+            <img x-show="theme === 'dark'" x-cloak src="{{url('assets/images/svg/header_dark.svg')}}" alt="Curve" class="w-full h-auto object-cover">
         </div>
     </div>
     <!--==================================================-->
-    <!-- Start-Hero-section-->
+    <!-- End-Hero-section-->
     <!--==================================================-->
-
 
     <!--==================================================-->
     <!-- Start-feature-section-->
     <!--==================================================-->
-    <div class="feature-section">
-        <div class="container">
-            <div class="row feature">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-feature-box">
-                        <div class="feature-icon">
-                            <img src="{{('assets/images/accueil/about-icon2.png')}}" alt="icon">
+    <div class="relative z-20 w-full max-w-[1728px] mx-auto px-6 sm:px-10 lg:px-16 -mt-32 md:-mt-16 pb-20">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-20 place-items-center">
+
+            <!-- Feature 1 -->
+            <div class="feature-card w-full max-w-[462px] min-h-[206px] rounded-[20px] p-[25px] pt-4 shadow-[0_16px_15px_rgba(12,124,52,0.25)] flex flex-col gap-[10px] hover:-translate-y-2 transition duration-300 reveal-on-scroll">
+                <div class="w-full flex justify-between items-center mb-1">
+                    <div class="w-[55px] h-[55px] bg-primary rounded-[10px] flex items-center justify-center text-white text-[25px] font-bold">
+                        1
+                    </div>
+                    <div class="w-[60px] h-[60px] rounded-full border-[5px] border-primary flex items-center justify-center bg-transparent">
+                        <img src="{{url('assets/images/accueil/about-icon2.png')}}" alt="icon" class="w-[35px] h-[35px] object-contain">
+                    </div>
+                </div>
+                <h3 class="feature-title text-[25px] font-normal m-0 leading-tight">SOLUTIONS DURABLES</h3>
+                <p class="feature-text text-[14px] font-light leading-snug m-0 max-w-[412px]">Nous proposons des équipements durables et certifiés, garantissant une longue durée de vie pour vos installations solaires et électriques professionnelles.</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-card w-full max-w-[462px] min-h-[206px] rounded-[20px] p-[25px] pt-4 shadow-[0_16px_15px_rgba(243,140,45,0.25)] flex flex-col gap-[10px] hover:-translate-y-2 transition duration-300 reveal-on-scroll reveal-delay-1">
+                <div class="w-full flex justify-between items-center mb-1">
+                    <div class="w-[55px] h-[55px] bg-secondary rounded-[10px] flex items-center justify-center text-white text-[25px] font-bold">
+                        2
+                    </div>
+                    <div class="w-[60px] h-[60px] rounded-full border-[5px] border-secondary flex items-center justify-center bg-transparent">
+                        <img src="{{url('assets/images/accueil/about-icon1.png')}}" alt="icon" class="w-[35px] h-[35px] object-contain">
+                    </div>
+                </div>
+                <h3 class="feature-title text-[25px] font-normal m-0 leading-tight">IMPACTS POSITIFS</h3>
+                <p class="feature-text text-[14px] font-light leading-snug m-0 max-w-[412px]">En choisissant nos solutions, vous contribuez activement à la réduction de l'empreinte carbone et au développement de l'énergie verte en Afrique.</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-card w-full max-w-[462px] min-h-[206px] rounded-[20px] p-[25px] pt-4 shadow-[0_16px_15px_rgba(12,124,52,0.25)] flex flex-col gap-[10px] hover:-translate-y-2 transition duration-300 reveal-on-scroll reveal-delay-2">
+                <div class="w-full flex justify-between items-center mb-1">
+                    <div class="w-[55px] h-[55px] bg-primary rounded-[10px] flex items-center justify-center text-white text-[25px] font-bold">
+                        3
+                    </div>
+                    <div class="w-[60px] h-[60px] rounded-full border-[5px] border-primary flex items-center justify-center bg-transparent">
+                        <img src="{{url('assets/images/accueil/faeture-icon2.png')}}" alt="icon" class="w-[35px] h-[35px] object-contain">
+                    </div>
+                </div>
+                <h3 class="feature-title text-[25px] font-normal m-0 leading-tight">ECONOMIQUE</h3>
+                <p class="feature-text text-[14px] font-light leading-snug m-0 max-w-[412px]">Réduisez vos factures mensuelles grâce à nos solutions solaires hautement performantes adaptées à vos besoins énergétiques sur le long terme.</p>
+            </div>
+
+        </div>
+    </div>
+    <!--==================================================-->
+    <!-- End-feature-section-->
+    <!--==================================================-->
+    <style>
+        .hero-overlay {
+            background: var(--hero-overlay);
+        }
+
+        .hero-pill {
+            background: var(--hero-pill-bg);
+            border: 1px solid var(--hero-pill-border);
+        }
+
+        .hero-text {
+            color: #ffffff;
+        }
+
+        .feature-card {
+            background: var(--feature-card-bg);
+            border: 1px solid var(--feature-card-border);
+        }
+
+        .feature-title {
+            color: var(--feature-title);
+        }
+
+        .feature-text {
+            color: var(--feature-text);
+        }
+    </style>
+
+    <!--==================================================-->
+    <!-- Start-About (Modern Highlights) -->
+    <!--==================================================-->
+    <section class="relative w-full z-10 about-section overflow-hidden">
+        <div class="absolute -top-32 -right-40 w-[420px] h-[420px] bg-primary/15 rounded-full blur-[120px] pointer-events-none" aria-hidden="true"></div>
+        <div class="absolute -bottom-40 -left-40 w-[520px] h-[520px] bg-secondary/15 rounded-full blur-[140px] pointer-events-none" aria-hidden="true"></div>
+
+        <div class="relative z-10 w-full max-w-[1728px] mx-auto px-6 sm:px-10 lg:px-16 py-24 lg:py-32">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+                <div class="lg:col-span-5">
+                    <p class="about-label text-[13px] tracking-[0.28em] uppercase mb-4">Notre difference</p>
+                    <h2 class="about-headline text-[34px] sm:text-[44px] lg:text-[52px] font-bold leading-tight">
+                        Une approche claire, mesurable et durable pour vos projets energetiques
+                    </h2>
+                    <p class="about-muted text-[16px] sm:text-[18px] leading-[1.7] mt-6 max-w-[520px]">
+                        Nous combinons expertise technique, execution rapide et partenariats solides pour fournir des resultats concrets sur le terrain.
+                    </p>
+                    <div class="mt-10 flex flex-wrap gap-4">
+                        <div class="bg-white rounded-2xl border border-black/5 px-5 py-4 shadow-[0_10px_30px_rgba(0,0,0,0.06)]">
+                            <p class="text-[22px] font-bold text-black leading-none">4+</p>
+                            <p class="text-[12px] uppercase tracking-widest text-black/50 mt-2">Ans d'experience</p>
                         </div>
-                        <div class="feature-content" >
-                            <h4>SOLUTIONS DURABLES</h4>
+                        <div class="bg-white rounded-2xl border border-black/5 px-5 py-4 shadow-[0_10px_30px_rgba(0,0,0,0.06)]">
+                            <p class="text-[22px] font-bold text-black leading-none">10+</p>
+                            <p class="text-[12px] uppercase tracking-widest text-black/50 mt-2">Projets reussis</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-feature-box">
-                        <div class="feature-icon">
-                            <img src="{{url('assets/images/accueil/about-icon1.png')}}" alt="icon">
-                        </div>
-                        <div class="feature-content" >
-                            <h4>IMPACTS POSITIFS</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" >
-                    <div class="single-feature-box">
-                        <div class="feature-icon">
-                            <img src="{{url('assets/images/accueil/faeture-icon2.png')}}" alt="icon">
-                        </div>
-                        <div class="feature-content" >
-                            <h4 class="text-center">ECONOMIQUE</h4>
-                        </div>
+
+                <div class="lg:col-span-7">
+                    <div class="grid gap-6">
+                        <article class="about-card reveal-on-scroll">
+                            <div class="about-index">01</div>
+                            <div class="about-content">
+                                <h3 class="about-title">Pourquoi Nous Choisir ?</h3>
+                                <p class="about-text">
+                                    Nous sommes une équipe passionnée d'ingénieurs qualifiés, dotés de plusieurs années d'expérience dans le domaine des énergies renouvelables, la mobilité électrique, la vente de matériels électriques et industriels en Afrique subsaharienne. Avec une expertise diversifiée couvrant le solaire, l'éolien, les véhicules électriques et bien plus encore, nous nous engageons à promouvoir un avenir énergétique durable pour la région.
+                                </p>
+                                <span class="about-pill">Strategie & impact</span>
+                            </div>
+                        </article>
+
+                        <article class="about-card reveal-on-scroll reveal-delay-1">
+                            <div class="about-index">02</div>
+                            <div class="about-content">
+                                <h3 class="about-title">Equipe d'ingénieurs qualifiés</h3>
+                                <p class="about-text">
+                                    Plus de 10 ans d'expériences et plus de 10 projets réalisés (MCA, GIZ, SABER, UNESCO, etc....). Notre force réside dans la complémentarité de nos compétences techniques et notre maîtrise des réalités locales pour des solutions adaptées à chaque contexte.
+                                </p>
+                                <span class="about-pill">Expertise terrain</span>
+                            </div>
+                        </article>
+
+                        <article class="about-card reveal-on-scroll reveal-delay-2">
+                            <div class="about-index">03</div>
+                            <div class="about-content">
+                                <h3 class="about-title">Partenariat International</h3>
+                                <p class="about-text">
+                                    Grâce à notre engagement envers l'excellence, nous avons réalisé avec succès une multitude de projets à travers l'Afrique subsaharienne (Togo, Benin, Burkina, Mali, Congo, Mauritanie, Senegal, etc.). Que ce soit pour des installations hors réseau, des parcs éoliens ou la mobilité électrique, notre équipe relève les défis les plus complexes pour un impact durable.
+                                </p>
+                                <span class="about-pill">Reseau global</span>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+
+        <style>
+            .about-section {
+                background: var(--page-bg);
+                color: var(--page-text);
+                transition: background 250ms ease, color 250ms ease;
+            }
+
+            .about-label,
+            .about-muted {
+                color: var(--page-muted);
+            }
+
+            .about-headline {
+                color: var(--page-text);
+            }
+
+            .about-card {
+                position: relative;
+                display: grid;
+                grid-template-columns: auto 1fr;
+                gap: 20px;
+                padding: 28px;
+                border-radius: 24px;
+                background: var(--about-card-bg);
+                border: 1px solid var(--about-card-border);
+                box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+                transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+            }
+
+            .about-card::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                border-radius: 24px;
+                padding: 1px;
+                background: linear-gradient(120deg, rgba(12, 124, 52, 0.35), rgba(243, 140, 45, 0.35), rgba(12, 124, 52, 0.15));
+                -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                -webkit-mask-composite: xor;
+                mask-composite: exclude;
+                pointer-events: none;
+            }
+
+            .about-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 26px 60px rgba(0, 0, 0, 0.12);
+                border-color: rgba(0, 0, 0, 0.12);
+            }
+
+            .about-index {
+                min-width: 58px;
+                height: 58px;
+                border-radius: 16px;
+                display: grid;
+                place-items: center;
+                font-weight: 700;
+                font-size: 18px;
+                color: #0c7c34;
+                background: rgba(12, 124, 52, 0.12);
+            }
+
+            .about-title {
+                font-size: 22px;
+                font-weight: 700;
+                color: var(--page-text);
+                margin: 0 0 10px 0;
+            }
+
+            .about-text {
+                font-size: 16px;
+                line-height: 1.7;
+                color: var(--page-muted);
+                margin: 0;
+            }
+
+            .about-pill {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                margin-top: 18px;
+                padding: 6px 14px;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                border-radius: 999px;
+                color: #0c7c34;
+                background: rgba(12, 124, 52, 0.12);
+            }
+
+            @media (max-width: 1024px) {
+                .about-card {
+                    grid-template-columns: 1fr;
+                }
+
+                .about-index {
+                    width: 58px;
+                }
+            }
+        </style>
+    </section>
     <!--==================================================-->
-    <!-- End-information-section-->
+    <!-- End-About-->
     <!--==================================================-->
-
-    <!--==================================================-->
-    <!-- Start-About-section-->
-    <!--==================================================-->
-
-    <div class="about-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-12">
-                    <div class="about-thumb">
-                        <img src="{{'assets/images/accueil/ord1.jpg'}}" sizes="516x499" style="display: block; margin: auto;" alt="about imgs">
-                        <div class="about-shape">
-                            <img src="{{'assets/images/about-shape.png'}}" alt="shape">
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12">
-                    <div class="section-title">
-                        <h4>Pourquoi Nous Choisir ? </h4>
-                        <p  style="text-align: justify">
-                            Nous sommes une équipe passionnée d'ingénieurs qualifiés,
-                            dotés de plusieurs années d'expérience dans le domaine des énergies renouvelables, la mobilité électrique, la vente de matériels électriques et industriels en Afrique subsaharienne.
-                            Avec une expertise diversifiée couvrant le solaire, l'éolien,
-                            les véhicules électriques et bien plus encore,
-                            nous nous engageons à promouvoir un avenir énergétique durable pour la région.
-                        </p>
-                    </div>
-                    <div class="about-box-item">
-                        <div class="section-title">
-                            <h4>Equipe 4 Experts Energéticiens</h4>
-                            <p>Plus 10 ans expériences  et plus de 10 projets réalisés (MCA,GIZ,SABER,UNESCO, etc....)   .</p>
-                        </div>
-                    </div>
-                    <div class="about-box-item">
-                        <div class="section-title">
-                            <h4>Partenariat  International</h4>
-                            <p style="text-align: justify">Grâce à notre engagement envers l'excellence et
-                                à notre dévouement à fournir des solutions énergétiques innovantes,
-                                nous avons réalisé avec succès une multitude de projets à travers l'Afrique subsaharienne (Togo, Benin, Burkina, Mali, Congo, Mauritanie, Senegal, etc.).
-                                Que ce soit pour développer des installations solaires hors réseau dans des communautés éloignées, mettre en place des parcs éoliens pour alimenter des régions rurales ou promouvoir l'adoption de véhicules électriques pour réduire les émissions de carbone, notre équipe est prête à relever les défis les plus complexes.
-                                .</p>
-                        </div>
-                    </div>
-                    <div class="solar-button">
-                        <a href="{{url('services')}}">Nos Services<i class="fas fa-plus"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--==================================================-->
-    <!-- End-About-section-->
-    <!<--==================================================-->
-
-
     <!--==================================================-->
     <!-- Start-Team-section-->
     <!--==================================================-->
-    <div class="team-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <div class="section-title tow">
-                        <img src="{{'assets/images/logo/logo3.png'}}" style="width:120px;" alt="">
-                        <h4 style="color: #000000">Ils nous font confiance !</h4>
-                    </div>
-                    <div class="row">
-{{--                        <div class="col-lg-2 col-md-6">--}}
-{{--                            <div class="single-team-box">--}}
-{{--                                <div class="team-thumb">--}}
-{{--                                    <a href="https://www.globalengineering.sn/" target="_blank"><img src="{{'assets/images/logo/logo-part1.png'}}" alt="" style="width:150px"></a>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="col-lg-2 col-md-6">--}}
-{{--                            <div class="single-team-box">--}}
-{{--                                <div class="team-thumb">--}}
-{{--                                    <a href="https://solar.yoorg.fr/" target="_blank"><img src="{{'assets/images/logo/logo-part2.png'}}" style="width:150px" alt=""></a>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="col-lg-2 col-md-6">--}}
-{{--                            <div class="single-team-box">--}}
-{{--                                <div class="team-thumb">--}}
-{{--                                    <a href="https://www.wilmosolar.com/" target="_blank" ><img src="{{'assets/images/logo/logo-part4.png'}}" style="width:150px" alt=""></a>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-                        <div class="col-lg-3 col-md-6">
-                            <div class="single-team-box">
-                                <div class="team-thumb">
-                                    <a href="https://www.watura.fr/ " target="_blank"><img src="{{'assets/images/logo/logo-part3.png'}}" style="width:150px" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
+    <section class="relative w-full py-24 lg:py-32 partner-section overflow-hidden">
+        <div class="absolute -top-32 right-0 w-[420px] h-[420px] bg-secondary/20 rounded-full blur-[140px] pointer-events-none" aria-hidden="true"></div>
+        <div class="absolute -bottom-40 -left-20 w-[520px] h-[520px] bg-primary/20 rounded-full blur-[160px] pointer-events-none" aria-hidden="true"></div>
 
-                        <div class="col-lg-3 col-md-6">
-                            <div class="single-team-box">
-                                <div class="team-thumb">
-                                    <a href="https://capetano.com/"  target="_blank" ><img src="{{'assets/images/logo/logo-part5.png'}}" style="width:150px" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="single-team-box">
-                                <div class="team-thumb">
-                                    <a href="https://ev3africa.com/about-us/"  target="_blank" ><img src="{{'assets/images/logo/logo-part6.png'}}" style="width:100px" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="single-team-box">
-                                <div class="team-thumb">
-                                    <a href="https://www.intechpower.co/"  target="_blank" ><img src="{{'assets/images/logo/logo-part7.png'}}" style="width:200px" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="relative z-10 w-full max-w-[1728px] mx-auto px-6 sm:px-10 lg:px-16">
+            <div class="max-w-[820px]">
+                <p class="partner-label text-[12px] tracking-[0.32em] uppercase">Partenaires</p>
+                <h2 class="partner-title text-[32px] sm:text-[42px] lg:text-[48px] font-semibold mt-4">Ils nous font confiance</h2>
+                <p class="partner-text text-[16px] sm:text-[18px] leading-[1.7] mt-6">
+                    Des institutions publiques aux acteurs prives, nos partenaires nous accompagnent pour deployer des solutions energetiques fiables et durables.
+                </p>
+            </div>
+
+            <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="partner-card reveal-on-scroll">
+                    <img src="{{url('assets/images/logo/logo-part3.png')}}" alt="Partner" class="partner-logo">
+                </div>
+                <div class="partner-card reveal-on-scroll reveal-delay-1">
+                    <img src="{{url('assets/images/logo/logo-part5.png')}}" alt="Partner" class="partner-logo">
+                </div>
+                <div class="partner-card reveal-on-scroll reveal-delay-2">
+                    <img src="{{url('assets/images/logo/logo-part7.png')}}" alt="Partner" class="partner-logo">
+                </div>
+                <div class="partner-card reveal-on-scroll reveal-delay-3">
+                    <img src="{{url('assets/images/logo/logo-part6.png')}}" alt="Partner" class="partner-logo">
                 </div>
             </div>
         </div>
-    </div>
+
+        <style>
+            .partner-section {
+                background: var(--partner-bg);
+                color: var(--partner-text);
+                transition: background 250ms ease, color 250ms ease;
+            }
+
+            .partner-label,
+            .partner-text {
+                color: var(--partner-muted);
+            }
+
+            .partner-title {
+                color: var(--partner-text);
+            }
+
+            .partner-card {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 120px;
+                border-radius: 22px;
+                background: var(--partner-card-bg);
+                border: 1px solid var(--partner-card-border);
+                box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+                backdrop-filter: blur(8px);
+                transition: transform 250ms ease, background 250ms ease, border-color 250ms ease;
+            }
+
+            .partner-card:hover {
+                transform: translateY(-6px);
+                background: rgba(255, 255, 255, 0.12);
+                border-color: rgba(255, 255, 255, 0.25);
+            }
+
+            .partner-logo {
+                max-height: 70px;
+                width: auto;
+                filter: grayscale(1) brightness(0.95);
+                transition: filter 250ms ease, transform 250ms ease;
+            }
+
+            .partner-card:hover .partner-logo {
+                filter: grayscale(0) brightness(1);
+                transform: scale(1.04);
+            }
+
+        </style>
+    </section>
     <!--==================================================-->
     <!-- End-Team-section-->
     <!--==================================================-->
 
-
 @endsection
+
+
+

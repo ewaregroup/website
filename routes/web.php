@@ -49,6 +49,14 @@ Route::get('publication', [App\Http\Controllers\PublicationController::class, 'p
 
 Route::get('services', [App\Http\Controllers\ServiceController::class, 'servicee']);
 
+// routes pour les filiales
+Route::get('filiales', function () {
+    return view('groupe.index');
+});
+Route::get('groupe', function () {
+    return redirect('filiales');
+});
+
 
 
 

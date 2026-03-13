@@ -1,119 +1,299 @@
 @extends('layout.base')
 @section('content')
+
     <!--==================================================-->
-    <!-- Start-breadcumb-section-->
+    <!-- Start-Publication-Hero -->
     <!--==================================================-->
-    <div class="breadcumb-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="breadcumb-content">
-                        <div class="breadcumb-title">
-                            <h1>Publications </h1>
-                        </div>
-                        <ul>
-                            <li><a href="{{'/'}}">Accueil</a></li>
-                            <li><i class="fas fa-angle-right"></i></li>
-                            <li>Publications</li>
+    <section class="publication-hero relative w-full overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="{{url('assets/images/publication/blogs2.jpeg')}}" alt="Publications" class="w-full h-full object-cover object-center">
+            <div class="absolute inset-0 publication-hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 w-full max-w-[1728px] mx-auto px-6 sm:px-10 lg:px-16 py-20 lg:py-28">
+            <div class="publication-hero-panel max-w-[720px]">
+                <p class="publication-kicker text-[12px] tracking-[0.32em] uppercase">Nos actions</p>
+                <h1 class="publication-hero-title text-[32px] sm:text-[46px] lg:text-[56px] font-bold leading-tight mt-4">
+                    Publications et retours d'experience
+                </h1>
+                <p class="publication-hero-text text-[16px] sm:text-[20px] leading-[1.7] mt-6">
+                    Analyses, projets terrain et partage d'expertise sur les solutions energetiques en Afrique.
+                </p>
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="{{url('contact')}}" class="inline-flex items-center justify-center px-6 py-3 rounded-[14px] bg-primary text-white font-semibold hover:bg-green-800 transition shadow-lg">
+                        Proposer une collaboration
+                    </a>
+                    <a href="{{url('shop')}}" class="inline-flex items-center justify-center px-6 py-3 rounded-[14px] border border-white/40 text-white hover:bg-white/10 transition">
+                        Voir nos actions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--==================================================-->
+    <!-- End-Publication-Hero -->
+    <!--==================================================-->
+
+
+    <!--==================================================-->
+    <!-- Start-Publication-Featured -->
+    <!--==================================================-->
+    <section class="publication-shell py-20 lg:py-28">
+        <div class="max-w-[1728px] mx-auto px-6 sm:px-10 lg:px-16">
+            <div class="flex flex-col lg:flex-row items-start justify-between gap-8">
+                <div class="max-w-[640px]">
+                    <p class="publication-kicker text-[12px] tracking-[0.32em] uppercase">A la une</p>
+                    <h2 class="publication-title text-[28px] sm:text-[38px] lg:text-[44px] font-semibold mt-4">
+                        Projet Methanisation
+                    </h2>
+                    <p class="publication-muted text-[16px] sm:text-[18px] leading-[1.7] mt-5">
+                        Visite terrain et analyse de la station de traitement des eaux usees a Lome. Un projet cle dans la valorisation energetique et la reduction des emissions.
+                    </p>
+                    <div class="mt-6 flex flex-wrap items-center gap-3 text-sm">
+                        <span class="publication-tag">22 Sept 2023</span>
+                        <span class="publication-tag">Alexandra Morel</span>
+                    </div>
+                    <a href="https://www.linkedin.com/posts/alexandra-morel-4b81ba197_dans-le-cadre-de-mon-stage-chez-eware-group-ugcPost-7110940352252915712-zQTd?utm_source=share&utm_medium=member_desktop" target="_blank" class="inline-flex items-center gap-2 mt-8 text-primary font-semibold">
+                        Lire sur LinkedIn <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="publication-featured-image reveal-on-scroll">
+                    <img src="{{url('assets/images/publication/blogs2.jpeg')}}" alt="Projet Methanisation" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--==================================================-->
+    <!-- End-Publication-Featured -->
+    <!--==================================================-->
+
+
+    <!--==================================================-->
+    <!-- Start-Publication-Grid -->
+    <!--==================================================-->
+    <section class="publication-shell pb-20 lg:pb-28">
+        <div class="max-w-[1728px] mx-auto px-6 sm:px-10 lg:px-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <article class="publication-card reveal-on-scroll">
+                    <div class="publication-card-image">
+                        <img src="{{url('assets/images/publication/blog1.jpeg')}}" alt="Qualite et rentabilite" class="w-full h-full object-cover">
+                    </div>
+                    <div class="publication-card-body">
+                        <p class="publication-meta">3 Mars 2024 | EWARE Group</p>
+                        <h3 class="publication-card-title">Qualite, cout et rentabilite d'un systeme solaire</h3>
+                        <p class="publication-card-text">
+                            Pourquoi la qualite d'installation et des composants change la durabilite, la performance et la securite d'un systeme solaire.
+                        </p>
+                        <ul class="publication-bullets">
+                            <li><i class="bi bi-check2"></i> Mauvaise qualite = depenses recurrentes</li>
+                            <li><i class="bi bi-check2"></i> Risque de panne et d'incendie</li>
+                            <li><i class="bi bi-check2"></i> Besoin d'un controle independant</li>
                         </ul>
+                        <a href="https://www.linkedin.com/posts/eware-group-electrical-work-and-renewable-energy-group_doit-on-juste-acheter-un-syst%C3%A8me-solaire-activity-7170099787684397058-USa6?utm_source=share&utm_medium=member_desktop" target="_blank" class="publication-link">
+                            Lire l'article <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
-                </div>
+                </article>
+
+                <article class="publication-card reveal-on-scroll reveal-delay-1">
+                    <div class="publication-card-image">
+                        <img src="{{url('assets/images/publication/blog.jpeg')}}" alt="La Nuit du Droit" class="w-full h-full object-cover">
+                    </div>
+                    <div class="publication-card-body">
+                        <p class="publication-meta">23 Nov 2024 | EWARE Group</p>
+                        <h3 class="publication-card-title">La Nuit du Droit</h3>
+                        <p class="publication-card-text">
+                            Participation a un evenement strategique sur les enjeux juridiques, financiers et environnementaux de la transition energetique.
+                        </p>
+                        <a href="https://www.linkedin.com/posts/alexandra-morel-4b81ba197_dans-le-cadre-de-mon-stage-chez-eware-group-ugcPost-7110940352252915712-zQTd?utm_source=share&utm_medium=member_desktop" target="_blank" class="publication-link">
+                            Lire l'article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
             </div>
         </div>
-    </div>
+    </section>
     <!--==================================================-->
-    <!-- Start-bradcumb-section-->
+    <!-- End-Publication-Grid -->
     <!--==================================================-->
 
 
     <!--==================================================-->
-    <!-- Start-blog-details-section-->
+    <!-- Start-Publication-CTA -->
     <!--==================================================-->
-    <div class="blogs-section details">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="row blogs-pr">
-                        <div class="col-lg-12">
-                            <div class="single-blog-dtls-box">
-                                <div class="row">
-                                    <!-- Colonne pour l'image -->
-                                    <div class="col-lg-6 col-md-6">
-                                        <h2 class="blog-title"><a href="https://www.linkedin.com/posts/alexandra-morel-4b81ba197_dans-le-cadre-de-mon-stage-chez-eware-group-ugcPost-7110940352252915712-zQTd?utm_source=share&utm_medium=member_desktop" target="_blank" >Projet Methanisation</a></h2>
-                                        <p class="blog-desc2" style="text-align: justify">
-                                            Dans le cadre de mon stage chez EWARE (Electrical Works and Renewable Energies) Group à Lomé au Togo, j’ai eu la chance de visiter la STEP de la Brasserie Boissons Rafraîchissantes BB LOME S.A du groupe Castel. Cette visite marque le point final du développement d’un dossier technique sur la méthanisation, un des principaux sujets de mon stage. Cette station de traitement des eaux usées est parmi les premières au Togo, et comporte la seule installation de méthanisation industrielle du pays, une innovation de taille dans un secteur d’avenir.
-
-                                            J’ai pu également échanger avec le directeur technique Mr. Quentin HAMBYE sur les perspectives de méthanisation envisagées par le groupe Castel sur ses nombreuses usines en Afrique de l’Ouest, ainsi que sur des projets d’optimisation de celui de Lomé (remplacer l’acide chlorhydrique par de l’acide carbonique issu du CO2, développer la valorisation du méthane actuellement brûlé). Je tiens à remercier le Dr Bimare KOMBATE pour m’avoir donné cette opportunité, Mr. Quentin HAMBYE de m’avoir reçu pour discuter sur les perspectives dans le secteur, et Mr. AGBENDA pour m’avoir fait visiter l’installation et pour avoir patiemment répondu à toutes mes questions!
-                                        </p>
-                                        <h6><li> Publié le 22 Septembre 2023 | Alexandra Morel </li></h6>
-                                    </div>
-
-                                    <!-- Colonne pour l'image -->
-                                    <div class="col-lg-6 col-md-6">
-                                        <img src="{{'assets/images/publication/blogs2.jpeg'}}" alt="" style=" margin-top: 90px;border-radius: 10px;max-width: 100%; height: auto;">
-                                    </div>
-
-                                    <div class="blog-quote">
-                                        <img class="qte-icon" src="{{'assets/images/publication/quote-1.jpg'}}" alt="icon">
-                                        <p  style="text-align: justify;margin-top: 15px">Act according to Paris Ageement !!! .</p>
-                                    </div>
-
-                                    <!-- Titre et texte pour le premier élément -->
-                                    <h2 class="blog-title" ><a href="https://www.linkedin.com/posts/eware-group-electrical-work-and-renewable-energy-group_doit-on-juste-acheter-un-syst%C3%A8me-solaire-activity-7170099787684397058-USa6?utm_source=share&utm_medium=member_desktop" target="_blank">L'impact qualité, coût et rentabilité sur la durée de vie d'un système solaire</a></h2>
-                                    <div class="col-lg-6 col-md-6">
-
-                                        <p class="blog-desc2" style="text-align: justify">
-                                            Doit-on juste acheter un système solaire parce que le coût est faible ? L'impact des matériels de mauvaise qualité sur la durée de vie d'un système solaire est considérable. La qualité des composants, tels que les panneaux solaires et les onduleurs, influence directement la performance, la fiabilité et la durabilité du système. La durée maximale de satisfaction d'un client avec un système solaire mal installé est de 3 mois Maximum. Voulez-vous une nouvelle source d'alimentation ou un système avec des pannes régulières. Il faut minimum 1 an pour qu'un système solaire bien installé signale une panne. Vu le manque de réglementation sur les systèmes solaires au niveau de la majorité des pays africains. La solution est de vérifier l'historique de l'installateur, et faire appel à une structure de contrôle pour l'approbation de votre commande.
-                                        </p>
-
-                                        <ul class="product-list">
-                                            <li><i class="bi bi-check2"></i> Achat d'un système de mauvaise qualité = Triple Investissement.</li>
-                                            <li><i class="bi bi-check2"></i> Achat d'un système de mauvaise qualité = Risque d'incendie.</li>
-                                            <li><i class="bi bi-check2"></i> Achat d'un système de mauvaise qualité = Dépannage régulier.</li>
-                                            <h6><li> Publié le 3 Mars 2024 | EWARE Group </li></h6>
-                                        </ul>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="blog-dtls-thumb">
-                                            <img src="{{'assets/images/publication/blog1.jpeg'}}" alt="" style="width: 600px;border-radius: 15px;margin-top: 10px;max-width: 100%;height: auto;">
-                                        </div>
-                                    </div>
-
-                                    <div class="blog-quote">
-                                        <img class="qte-icon" src="{{'assets/images/publication/quote-1.jpg'}}" alt="icon">
-                                        <p  style="text-align: justify;margin-top: 15px">Act according to Paris Ageement !!! .</p>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6">
-                                        <h2 class="blog-title"><a href="https://www.linkedin.com/posts/alexandra-morel-4b81ba197_dans-le-cadre-de-mon-stage-chez-eware-group-ugcPost-7110940352252915712-zQTd?utm_source=share&utm_medium=member_desktop" target="_blank" >La Nuit Du Droit</a></h2>
-                                        <p class="blog-desc2" style="text-align: justify">
-                                            EWARE Group a pris part, en qualité de partenaire stratégique, à la deuxième édition de "La Nuit du Droit" (LNDD), tenue le 23 novembre 2024 à l’Hôtel Sarakawa. Cet événement d’envergure, placé sous le thème "Innovations juridiques et défis contemporains : financement et défis environnementaux", a offert une plateforme unique pour discuter des enjeux cruciaux liés à l’évolution des cadres juridiques, aux mécanismes de financement, et aux défis environnementaux dans un monde en pleine mutation.
-
-                                            En tant qu’entreprise engagée dans le développement de solutions énergétiques durables et innovantes, EWARE Group a saisi cette opportunité pour renforcer sa position en tant qu’acteur incontournable dans le domaine des énergies renouvelables. Sa participation a également permis de mettre en exergue son rôle dans la transition énergétique et son engagement en faveur d’un avenir plus écologique.
-
-                                            Cet événement a également constitué une tribune idéale pour EWARE Group afin de promouvoir ses initiatives, tout en participant activement aux réflexions sur des problématiques contemporaines. En collaborant avec des experts juridiques, financiers et environnementaux, l’entreprise a réaffirmé son ambition de contribuer de manière significative à la recherche de solutions novatrices face aux enjeux planétaires actuels.
-                                        </p>
-                                        <h6><li> Publié le 23 Novembre 2024 | EWARE Group  </li></h6>
-                                    </div>
-
-                                    <!-- Colonne pour l'image -->
-                                    <div class="col-lg-6 col-md-6">
-                                        <img src="{{'assets/images/publication/blog.jpeg'}}" alt="" style=" margin-top: 90px;border-radius: 10px;max-width: 100%; height: auto;">
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <section class="publication-cta py-16 lg:py-20">
+        <div class="max-w-[1728px] mx-auto px-6 sm:px-10 lg:px-16">
+            <div class="publication-cta-card reveal-on-scroll">
+                <div>
+                    <h3 class="text-[24px] sm:text-[30px] font-semibold">Vous avez une action a valoriser ?</h3>
+                    <p class="text-[15px] sm:text-[17px] opacity-80 mt-3">Nous pouvons documenter vos projets et partager les resultats avec votre reseau.</p>
                 </div>
+                <a href="{{url('contact')}}" class="inline-flex items-center justify-center px-6 py-3 rounded-[14px] bg-white text-black font-semibold hover:scale-105 transition shadow-lg">
+                    Publier avec nous
+                </a>
             </div>
         </div>
-    </div>
-
+    </section>
     <!--==================================================-->
-    <!-- End-blog-details-section-->
+    <!-- End-Publication-CTA -->
     <!--==================================================-->
 
+    <style>
+        .publication-hero {
+            color: #ffffff;
+        }
 
+        .publication-hero-overlay {
+            background: linear-gradient(120deg, rgba(6, 12, 9, 0.8), rgba(6, 12, 9, 0.55) 45%, rgba(6, 12, 9, 0.85));
+        }
+
+        .publication-hero-panel {
+            background: rgba(6, 12, 9, 0.55);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 26px;
+            padding: 26px 28px;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+        }
+
+        .publication-hero-title,
+        .publication-hero-text {
+            color: #ffffff;
+        }
+
+        .publication-shell {
+            background: var(--page-bg);
+            color: var(--page-text);
+        }
+
+        .publication-kicker {
+            color: var(--page-muted);
+        }
+
+        .publication-title,
+        .publication-card-title {
+            color: var(--page-text);
+        }
+
+        .publication-muted,
+        .publication-card-text {
+            color: var(--page-muted);
+        }
+
+        .publication-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: rgba(12, 124, 52, 0.12);
+            color: #0c7c34;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .publication-featured-image {
+            width: 100%;
+            max-width: 540px;
+            border-radius: 26px;
+            overflow: hidden;
+            box-shadow: 0 22px 45px rgba(0, 0, 0, 0.18);
+        }
+
+        .publication-card {
+            background: var(--about-card-bg);
+            border: 1px solid var(--about-card-border);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 18px 36px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .publication-card-image {
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .publication-card-body {
+            padding: 20px 22px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .publication-meta {
+            font-size: 12px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--page-muted);
+            margin: 0;
+        }
+
+        .publication-card-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .publication-card-text {
+            font-size: 15px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .publication-bullets {
+            margin: 0;
+            padding-left: 0;
+            list-style: none;
+            display: grid;
+            gap: 6px;
+            color: var(--page-muted);
+            font-size: 14px;
+        }
+
+        .publication-bullets li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .publication-bullets i {
+            color: #0c7c34;
+        }
+
+        .publication-link {
+            color: #0c7c34;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .publication-cta {
+            background: var(--page-bg);
+        }
+
+        .publication-cta-card {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 28px 32px;
+            border-radius: 24px;
+            background: linear-gradient(120deg, rgba(12, 124, 52, 0.9), rgba(243, 140, 45, 0.85));
+            color: #ffffff;
+            box-shadow: 0 20px 45px rgba(12, 124, 52, 0.35);
+        }
+
+        @media (min-width: 768px) {
+            .publication-cta-card {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+    </style>
 @endsection
