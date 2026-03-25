@@ -101,7 +101,6 @@
                         <a href="{{url('detailsshop2')}}" class="shop-card-btn">Details</a>
                     </div>
                 </article>
-
                 <article class="shop-card reveal-on-scroll reveal-delay-2">
                     <div class="shop-card-image">
                         <img src="{{url('assets/images/portfolio/shop4.png')}}" alt="Pompage d'eau">
@@ -135,13 +134,6 @@
                         <a href="{{url('detailsshop6')}}" class="shop-card-btn">Details</a>
                     </div>
                 </article>
-            </div>
-
-            <div class="mt-10 flex justify-center">
-                <div class="shop-pagination">
-                    <a href="{{url('shop')}}" class="active">1</a>
-                    <a href="{{url('shops')}}">2</a>
-                </div>
             </div>
         </div>
     </section>

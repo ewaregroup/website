@@ -17,15 +17,15 @@
                 <!-- Welcom Pill -->
                 <div class="hero-pill inline-flex items-center gap-4 px-6 py-2 rounded-full backdrop-blur-[2px]">
                     <span class="w-[15px] h-[15px] bg-secondary rounded-full"></span>
-                    <span class="text-white text-[25px] font-normal leading-none pt-1">Welcome</span>
+                    <span class="text-white text-[25px] font-normal leading-none pt-1">Bienvenue</span>
                 </div>
 
                 <h1 class="hero-text text-[40px] sm:text-[55px] font-bold leading-tight m-0">
-                    Optez pour l'efficacité <br/>énergétique !
+                    Optimisez votre performance <br/>énergétique et industrielle
                 </h1>
 
                 <p class="hero-text text-[20px] sm:text-[25px] font-normal m-0">
-                    Economisez de l'argent en optant pour nos solutions.
+                    Des solutions intégrées pour réduire vos coûts opérationnels et votre empreinte carbone.
                 </p>
 
                 <a href="{{url('shop')}}" class="inline-flex justify-center items-center px-10 py-3.5 bg-primary hover:bg-[#0A6B2D] hover:shadow-[0_8px_30px_rgb(12,124,52,0.4)] rounded-[12px] hover:scale-105 transition-all duration-300 shadow-lg mt-4 w-fit group">
@@ -61,8 +61,8 @@
                         <img src="{{url('assets/images/accueil/about-icon2.png')}}" alt="icon" class="w-[35px] h-[35px] object-contain">
                     </div>
                 </div>
-                <h3 class="feature-title text-[25px] font-normal m-0 leading-tight">SOLUTIONS DURABLES</h3>
-                <p class="feature-text text-[14px] font-light leading-snug m-0 max-w-[412px]">Nous proposons des équipements durables et certifiés, garantissant une longue durée de vie pour vos installations solaires et électriques professionnelles.</p>
+                <h3 class="feature-title text-[25px] font-normal m-0 leading-tight">INGÉNIERIE INTÉGRÉE</h3>
+                <p class="feature-text text-[14px] font-light leading-snug m-0 max-w-[412px]">Conception, fourniture et installation de solutions solaires, réseaux HT/BT et équipements industriels adaptés à vos besoins.</p>
             </div>
 
             <!-- Feature 2 -->
@@ -75,8 +75,8 @@
                         <img src="{{url('assets/images/accueil/about-icon1.png')}}" alt="icon" class="w-[35px] h-[35px] object-contain">
                     </div>
                 </div>
-                <h3 class="feature-title text-[25px] font-normal m-0 leading-tight">IMPACTS POSITIFS</h3>
-                <p class="feature-text text-[14px] font-light leading-snug m-0 max-w-[412px]">En choisissant nos solutions, vous contribuez activement à la réduction de l'empreinte carbone et au développement de l'énergie verte en Afrique.</p>
+                <h3 class="feature-title text-[25px] font-normal m-0 leading-tight">IMPACT DURABLE</h3>
+                <p class="feature-text text-[14px] font-light leading-snug m-0 max-w-[412px]">Efficacité énergétique optimale, réduction des coûts opérationnels et de l'empreinte carbone.</p>
             </div>
 
             <!-- Feature 3 -->
@@ -89,8 +89,8 @@
                         <img src="{{url('assets/images/accueil/faeture-icon2.png')}}" alt="icon" class="w-[35px] h-[35px] object-contain">
                     </div>
                 </div>
-                <h3 class="feature-title text-[25px] font-normal m-0 leading-tight">ECONOMIQUE</h3>
-                <p class="feature-text text-[14px] font-light leading-snug m-0 max-w-[412px]">Réduisez vos factures mensuelles grâce à nos solutions solaires hautement performantes adaptées à vos besoins énergétiques sur le long terme.</p>
+                <h3 class="feature-title text-[25px] font-normal m-0 leading-tight">ACCOMPAGNEMENT COMPLET</h3>
+                <p class="feature-text text-[14px] font-light leading-snug m-0 max-w-[412px]">Conseil, audit, réalisation, maintenance et suivi: un partenaire unique sur tout le cycle de vie.</p>
             </div>
 
         </div>
@@ -136,21 +136,21 @@
         <div class="relative z-10 w-full max-w-[1728px] mx-auto px-6 sm:px-10 lg:px-16 py-24 lg:py-32">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
                 <div class="lg:col-span-5">
-                    <p class="about-label text-[13px] tracking-[0.28em] uppercase mb-4">Notre difference</p>
+                    <p class="about-label text-[13px] tracking-[0.28em] uppercase mb-4">Notre différence</p>
                     <h2 class="about-headline text-[34px] sm:text-[44px] lg:text-[52px] font-bold leading-tight">
-                        Une approche claire, mesurable et durable pour vos projets energetiques
+                        Une approche complète pour vos infrastructures énergétiques et industrielles
                     </h2>
                     <p class="about-muted text-[16px] sm:text-[18px] leading-[1.7] mt-6 max-w-[520px]">
-                        Nous combinons expertise technique, execution rapide et partenariats solides pour fournir des resultats concrets sur le terrain.
+                        Nous combinons expertise technique, innovation et exécution terrain pour livrer des résultats fiables et mesurables.
                     </p>
                     <div class="mt-10 flex flex-wrap gap-4">
                         <div class="bg-white rounded-2xl border border-black/5 px-5 py-4 shadow-[0_10px_30px_rgba(0,0,0,0.06)]">
-                            <p class="text-[22px] font-bold text-black leading-none">4+</p>
-                            <p class="text-[12px] uppercase tracking-widest text-black/50 mt-2">Ans d'experience</p>
+                            <p class="text-[22px] font-bold text-black leading-none">7</p>
+                            <p class="text-[12px] uppercase tracking-widest text-black/50 mt-2">Domaines d'intervention</p>
                         </div>
                         <div class="bg-white rounded-2xl border border-black/5 px-5 py-4 shadow-[0_10px_30px_rgba(0,0,0,0.06)]">
-                            <p class="text-[22px] font-bold text-black leading-none">10+</p>
-                            <p class="text-[12px] uppercase tracking-widest text-black/50 mt-2">Projets reussis</p>
+                            <p class="text-[22px] font-bold text-black leading-none">5</p>
+                            <p class="text-[12px] uppercase tracking-widest text-black/50 mt-2">Services clés</p>
                         </div>
                     </div>
                 </div>
@@ -160,33 +160,33 @@
                         <article class="about-card reveal-on-scroll">
                             <div class="about-index">01</div>
                             <div class="about-content">
-                                <h3 class="about-title">Pourquoi Nous Choisir ?</h3>
+                                <h3 class="about-title">Partenaire Stratégique</h3>
                                 <p class="about-text">
-                                    Nous sommes une équipe passionnée d'ingénieurs qualifiés, dotés de plusieurs années d'expérience dans le domaine des énergies renouvelables, la mobilité électrique, la vente de matériels électriques et industriels en Afrique subsaharienne. Avec une expertise diversifiée couvrant le solaire, l'éolien, les véhicules électriques et bien plus encore, nous nous engageons à promouvoir un avenir énergétique durable pour la région.
+                                    Nous allions expertise énergétique et industrielle pour concevoir des solutions adaptées à vos contraintes d’exploitation, avec un objectif clair : améliorer votre compétitivité.
                                 </p>
-                                <span class="about-pill">Strategie & impact</span>
+                                <span class="about-pill">Stratégie & performance</span>
                             </div>
                         </article>
 
                         <article class="about-card reveal-on-scroll reveal-delay-1">
                             <div class="about-index">02</div>
                             <div class="about-content">
-                                <h3 class="about-title">Equipe d'ingénieurs qualifiés</h3>
+                                <h3 class="about-title">Expertise multi-métiers</h3>
                                 <p class="about-text">
-                                    Plus de 10 ans d'expériences et plus de 10 projets réalisés (MCA, GIZ, SABER, UNESCO, etc....). Notre force réside dans la complémentarité de nos compétences techniques et notre maîtrise des réalités locales pour des solutions adaptées à chaque contexte.
+                                    Solaire, réseaux HT/BT, mobilité électrique, froid & climatisation, IT/télécoms, maintenance mécanique: une équipe unique pour coordonner vos projets.
                                 </p>
-                                <span class="about-pill">Expertise terrain</span>
+                                <span class="about-pill">Ingénierie terrain</span>
                             </div>
                         </article>
 
                         <article class="about-card reveal-on-scroll reveal-delay-2">
                             <div class="about-index">03</div>
                             <div class="about-content">
-                                <h3 class="about-title">Partenariat International</h3>
+                                <h3 class="about-title">Cycle de Vie Complet</h3>
                                 <p class="about-text">
-                                    Grâce à notre engagement envers l'excellence, nous avons réalisé avec succès une multitude de projets à travers l'Afrique subsaharienne (Togo, Benin, Burkina, Mali, Congo, Mauritanie, Senegal, etc.). Que ce soit pour des installations hors réseau, des parcs éoliens ou la mobilité électrique, notre équipe relève les défis les plus complexes pour un impact durable.
+                                    Audit et conseil énergétique, développement, exécution, fourniture de matériels, et service après-vente : nous restons à vos côtés pour garantir l'optimisation continue.
                                 </p>
-                                <span class="about-pill">Reseau global</span>
+                                <span class="about-pill">Suivi & maintenance</span>
                             </div>
                         </article>
                     </div>
@@ -309,7 +309,7 @@
                 <p class="partner-label text-[12px] tracking-[0.32em] uppercase">Partenaires</p>
                 <h2 class="partner-title text-[32px] sm:text-[42px] lg:text-[48px] font-semibold mt-4">Ils nous font confiance</h2>
                 <p class="partner-text text-[16px] sm:text-[18px] leading-[1.7] mt-6">
-                    Des institutions publiques aux acteurs prives, nos partenaires nous accompagnent pour deployer des solutions energetiques fiables et durables.
+                    Des institutions publiques aux acteurs privés, nos partenaires nous accompagnent pour déployer des solutions fiables et durables.
                 </p>
             </div>
 
@@ -318,10 +318,10 @@
                     <img src="{{url('assets/images/logo/logo-part3.png')}}" alt="Partner" class="partner-logo">
                 </div>
                 <div class="partner-card reveal-on-scroll reveal-delay-1">
-                    <img src="{{url('assets/images/logo/logo-part5.png')}}" alt="Partner" class="partner-logo">
+                    <img src="{{url('assets/images/logo/accessmali_logo2.png')}}" alt="Partner" class="partner-logo">
                 </div>
                 <div class="partner-card reveal-on-scroll reveal-delay-2">
-                    <img src="{{url('assets/images/logo/logo-part7.png')}}" alt="Partner" class="partner-logo">
+                    <img src="{{url('assets/images/logo/egnon_consulting_logo2.png')}}" alt="Partner" class="partner-logo">
                 </div>
                 <div class="partner-card reveal-on-scroll reveal-delay-3">
                     <img src="{{url('assets/images/logo/logo-part6.png')}}" alt="Partner" class="partner-logo">
@@ -383,6 +383,5 @@
     <!--==================================================-->
 
 @endsection
-
 
 

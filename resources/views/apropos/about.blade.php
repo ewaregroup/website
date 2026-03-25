@@ -43,15 +43,13 @@
                     <div class="section-title">
                         <h4>A propos  </h4>
                         <h1>Qui Sommes Nous ?</h1>
-                        <p class="desc-one" style="text-align: justify" >Une entreprise spécialisée dans le domaine des énergies renouvelables et  de la mobilité électrique.
-                            Une entreprise dédiée à l'innovation durable dans les domaines de l'énergie. Notre mission est de façonner un avenir plus vert en offrant une gamme complète de services allant de l'ingénierie conseil à la distribution d'équipements de pointe.
+                        <p class="desc-one" style="text-align: justify" >Eware Group fournit, installe et intègre des solutions énergétiques et industrielles. Nous accompagnons les entreprises et les industries dans l’optimisation de leur efficacité énergétique grâce à des équipements innovants et durables.
                         </p>
                     </div>
                     <div class="about-box-item">
                         <div class="about-content">
                             <h4 style="text-decoration-color: #0b3f0f">Vision</h4>
-                            <p >Notre engagement envers l'écologie et l'efficacité énergétique guide chacune de nos actions, et notre équipe passionnée travaille sans relâche pour développer des solutions innovantes tout en respectant l'environnement.
-                                Rejoignez-nous dans notre quête pour un avenir plus propre et plus durable.</p>
+                            <p >Avec une approche axée sur l’innovation et la performance industrielle, nous intervenons sur l’ensemble du cycle de vie des infrastructures. Eware Group se positionne comme un partenaire stratégique pour les entreprises souhaitant améliorer leur compétitivité tout en adoptant des solutions énergétiques durables.</p>
                         </div>
                     </div>
                     <div class="about-box-item">

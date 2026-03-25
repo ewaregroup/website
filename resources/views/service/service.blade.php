@@ -14,10 +14,10 @@
             <div class="hero-panel max-w-[760px]">
                 <p class="service-kicker text-[12px] tracking-[0.32em] uppercase">Nos solutions</p>
                 <h1 class="service-hero-title text-[34px] sm:text-[48px] lg:text-[60px] font-bold leading-tight mt-4">
-                    Des solutions energetiques fiables, rentables et durables
+                    Des équipements innovants et durables
                 </h1>
                 <p class="service-hero-text text-[16px] sm:text-[20px] leading-[1.7] mt-6">
-                    Nous accompagnons entreprises, institutions et particuliers a chaque etape, du conseil a la realisation. Notre objectif: optimiser vos performances energetiques, reduire les couts et garantir la fiabilite sur le long terme.
+                    Nous accompagnons entreprises et industries à chaque étape, de l'ingénierie à la fourniture de matériel. Notre objectif : optimiser votre efficacité énergétique, réduire vos coûts opérationnels et diminuer votre empreinte carbone.
                 </p>
 
                 <div class="mt-10 flex flex-wrap gap-4">
@@ -78,61 +78,71 @@
             <div class="mt-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                 <article class="service-card reveal-on-scroll">
                     <div class="service-icon">
-                        <i class="bi bi-check2"></i>
+                        <i class="bi bi-lightning-charge"></i>
                     </div>
-                    <h3 class="service-card-title">Conseil en energie</h3>
+                    <h3 class="service-card-title">Solaire et Réseaux Électriques</h3>
                     <p class="service-card-text">
-                        Nous aidons a choisir les solutions les plus efficaces pour limiter les depenses et maximiser la performance energetique.
+                        Ingénierie et installation de kits et centrales solaires, ainsi que la construction de lignes électriques HT/BT.
                     </p>
                 </article>
 
                 <article class="service-card reveal-on-scroll reveal-delay-1">
                     <div class="service-icon">
-                        <i class="bi bi-check2"></i>
+                        <i class="bi bi-ev-station"></i>
                     </div>
-                    <h3 class="service-card-title">Audit energetique</h3>
+                    <h3 class="service-card-title">Mobilité Électrique</h3>
                     <p class="service-card-text">
-                        Analyse detaillee de la consommation et recommandations concretes pour reduire les factures et optimiser l'exploitation.
+                        Intégration de solutions complètes (véhicules électriques et infrastructures de recharge).
                     </p>
                 </article>
 
                 <article class="service-card reveal-on-scroll reveal-delay-2">
                     <div class="service-icon">
-                        <i class="bi bi-check2"></i>
+                        <i class="bi bi-snow"></i>
                     </div>
-                    <h3 class="service-card-title">Developpement de projets</h3>
+                    <h3 class="service-card-title">Froid et Climatisation</h3>
                     <p class="service-card-text">
-                        Conception technique, dimensionnement, estimation des couts et solutions de financement adaptees a votre contexte.
+                        Installation et maintenance de systèmes de climatisation et de froid industriel ou commercial.
                     </p>
                 </article>
 
                 <article class="service-card reveal-on-scroll">
                     <div class="service-icon">
-                        <i class="bi bi-check2"></i>
+                        <i class="bi bi-building"></i>
                     </div>
-                    <h3 class="service-card-title">Realisation et evaluation</h3>
+                    <h3 class="service-card-title">Projets Industriels & BTP</h3>
                     <p class="service-card-text">
-                        Mise en oeuvre conforme au cahier de charges, suivi qualite, mise en service et verification des performances.
+                        Conception et réalisation de projets industriels complexes, de l'électricité au bâtiment et travaux publics.
                     </p>
                 </article>
 
                 <article class="service-card reveal-on-scroll reveal-delay-1">
                     <div class="service-icon">
-                        <i class="bi bi-check2"></i>
+                        <i class="bi bi-cpu"></i>
                     </div>
-                    <h3 class="service-card-title">Maintenance et supervision</h3>
+                    <h3 class="service-card-title">IT et Télécommunications</h3>
                     <p class="service-card-text">
-                        Contrats de maintenance preventive, supervision a distance et interventions rapides pour garantir la continuite.
+                        Optimisation et modernisation des systèmes informatiques et réseaux de télécommunications.
                     </p>
                 </article>
 
                 <article class="service-card reveal-on-scroll reveal-delay-2">
                     <div class="service-icon">
-                        <i class="bi bi-check2"></i>
+                        <i class="bi bi-tools"></i>
                     </div>
-                    <h3 class="service-card-title">Formation et transfert</h3>
+                    <h3 class="service-card-title">Ingénierie Mécanique</h3>
                     <p class="service-card-text">
-                        Renforcement des competences des equipes locales pour assurer l'exploitation durable des installations.
+                        Expertise en mécanique et maintenance industrielle pour assurer la fiabilité de vos installations.
+                    </p>
+                </article>
+
+                <article class="service-card reveal-on-scroll">
+                    <div class="service-icon">
+                        <i class="bi bi-box-seam"></i>
+                    </div>
+                    <h3 class="service-card-title">Fourniture d'Équipements</h3>
+                    <p class="service-card-text">
+                        Fourniture et installation de matériels de haute qualité répondant aux normes de l'industrie.
                     </p>
                 </article>
             </div>
@@ -140,6 +150,49 @@
     </section>
     <!--==================================================-->
     <!-- End-Service-Cards -->
+    <!--==================================================-->
+
+    <!--==================================================-->
+    <!-- Start-Subsidiaries -->
+    <!--==================================================-->
+    <section class="service-shell py-20 lg:py-28">
+        <div class="max-w-[1728px] mx-auto px-6 sm:px-10 lg:px-16">
+            <div class="flex flex-col lg:flex-row items-start justify-between gap-8">
+                <div class="max-w-[640px]">
+                    <p class="service-kicker text-[12px] tracking-[0.32em] uppercase">Nos filiales</p>
+                    <h2 class="service-title text-[28px] sm:text-[38px] lg:text-[44px] font-semibold mt-4">
+                        Des activites complementaires qui renforcent nos solutions
+                    </h2>
+                    <p class="service-muted text-[16px] sm:text-[18px] leading-[1.7] mt-5">
+                        Retrouvez ici les entites et expertises qui soutiennent nos offres de services.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                <a class="solution-entity-card reveal-on-scroll" href="https://eimatafrica.com" target="_blank" rel="noopener">
+                    <div class="solution-entity-icon">EM</div>
+                    <h3>EIMAT</h3>
+                    <p>Solutions de mobilite electrique, bornes et accompagnement flotte.</p>
+                    <span class="solution-entity-link">Visiter le site</span>
+                </a>
+                <a class="solution-entity-card reveal-on-scroll reveal-delay-1" href="https://filiale-industry.example.com" target="_blank" rel="noopener">
+                    <div class="solution-entity-icon">EI</div>
+                    <h3>EWARE Mobility</h3>
+                    <p>Equipements industriels, installation et maintenance sur mesure.</p>
+                    <span class="solution-entity-link">Visiter le site</span>
+                </a>
+                <a class="solution-entity-card reveal-on-scroll reveal-delay-2" href="https://filiale-consulting.example.com" target="_blank" rel="noopener">
+                    <div class="solution-entity-icon">EC</div>
+                    <h3>Solsizer</h3>
+                    <p>Audit, conseil et pilotage de projets energetiques complexes.</p>
+                    <span class="solution-entity-link">Visiter le site</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--==================================================-->
+    <!-- End-Subsidiaries -->
     <!--==================================================-->
 
 
@@ -163,22 +216,29 @@
                         <div class="process-step reveal-on-scroll">
                             <div class="process-index">01</div>
                             <div>
-                                <h3 class="process-title">Diagnostic et objectifs</h3>
-                                <p class="process-text">Analyse des besoins, audit et definition des objectifs de performance.</p>
+                                <h3 class="process-title">Conseil et audit énergétique</h3>
+                                <p class="process-text">Évaluation de vos besoins et audit pour optimiser les performances.</p>
                             </div>
                         </div>
                         <div class="process-step reveal-on-scroll reveal-delay-1">
                             <div class="process-index">02</div>
                             <div>
-                                <h3 class="process-title">Conception et financement</h3>
-                                <p class="process-text">Dimensionnement, choix technologiques et plan de financement adapte.</p>
+                                <h3 class="process-title">Développement et exécution</h3>
+                                <p class="process-text">Ingénierie, conception et réalisation de vos projets énergétiques et industriels.</p>
                             </div>
                         </div>
                         <div class="process-step reveal-on-scroll reveal-delay-2">
                             <div class="process-index">03</div>
                             <div>
-                                <h3 class="process-title">Execution et suivi</h3>
-                                <p class="process-text">Installation, mise en service, formation et suivi de performance.</p>
+                                <h3 class="process-title">Services après-vente</h3>
+                                <p class="process-text">Suivi, maintenance préventive et curative, et contrôle des installations.</p>
+                            </div>
+                        </div>
+                        <div class="process-step reveal-on-scroll">
+                            <div class="process-index">04</div>
+                            <div>
+                                <h3 class="process-title">Travaux d'études</h3>
+                                <p class="process-text">R&D, accompagnement à l'innovation et à la transition énergétique.</p>
                             </div>
                         </div>
                     </div>
@@ -296,7 +356,7 @@
             <div class="service-cta-card reveal-on-scroll">
                 <div>
                     <h3 class="text-[24px] sm:text-[30px] font-semibold">Pret a lancer votre projet ?</h3>
-                    <p class="text-[15px] sm:text-[17px] opacity-80 mt-3">Contactez nos experts pour un plan d'action clair et rapide.</p>
+                    <p class="service-cta-text text-[15px] sm:text-[17px] mt-3">Contactez nos experts pour un plan d'action clair et rapide.</p>
                 </div>
                 <a href="{{url('contact')}}" class="inline-flex items-center justify-center px-6 py-3 rounded-[14px] bg-white text-black font-semibold hover:scale-105 transition shadow-lg">
                     Nous contacter
@@ -335,6 +395,10 @@
         .service-hero-title,
         .service-hero-text {
             color: #ffffff;
+        }
+
+        .service-hero .service-kicker {
+            color: rgba(255, 255, 255, 0.78);
         }
 
         .service-shell {
@@ -402,6 +466,55 @@
             color: var(--page-muted);
         }
 
+        .solution-entity-card {
+            background: var(--about-card-bg);
+            border: 1px solid var(--about-card-border);
+            border-radius: 22px;
+            padding: 24px;
+            box-shadow: 0 18px 36px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            display: block;
+            transition: transform 200ms ease, box-shadow 200ms ease;
+        }
+
+        .solution-entity-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 22px 44px rgba(0, 0, 0, 0.14);
+        }
+
+        .solution-entity-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 14px 0 8px;
+            color: var(--page-text);
+        }
+
+        .solution-entity-card p {
+            margin: 0;
+            color: var(--page-muted);
+            line-height: 1.6;
+        }
+
+        .solution-entity-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 12px;
+            color: #0c7c34;
+            font-weight: 600;
+        }
+
+        .solution-entity-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            background: rgba(12, 124, 52, 0.12);
+            color: #0c7c34;
+            display: grid;
+            place-items: center;
+            font-weight: 700;
+        }
+
         .service-stat {
             background: var(--about-card-bg);
             border: 1px solid var(--about-card-border);
@@ -466,7 +579,7 @@
             background: var(--page-bg);
         }
 
-        .service-cta-card {
+                .service-cta-card {
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -474,9 +587,29 @@
             justify-content: space-between;
             padding: 28px 32px;
             border-radius: 24px;
-            background: linear-gradient(120deg, rgba(12, 124, 52, 0.9), rgba(243, 140, 45, 0.85));
-            color: #ffffff;
-            box-shadow: 0 20px 45px rgba(12, 124, 52, 0.35);
+            background: var(--about-card-bg);
+            border: 1px solid var(--about-card-border);
+            box-shadow: 0 18px 36px rgba(0, 0, 0, 0.12);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-cta-card::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(180deg, #0c7c34, #f38c2d);
+        }
+
+        .service-cta-card h3 {
+            color: var(--page-text);
+        }
+
+                .service-cta-text {
+            color: var(--page-muted);
         }
 
         @media (min-width: 768px) {

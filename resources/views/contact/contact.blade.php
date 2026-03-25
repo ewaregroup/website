@@ -17,7 +17,7 @@
                     Parlons de votre projet
                 </h1>
                 <p class="contact-hero-text text-[16px] sm:text-[20px] leading-[1.7] mt-6">
-                    Chaque projet est unique. Nous adaptons nos services et nos equipes pour atteindre vos objectifs avec un budget maitrise.
+                    Chaque projet est unique. Nous adaptons nos services et nos équipes pour atteindre vos objectifs d'optimisation énergétique avec un budget maîtrisé tout au long du cycle de vie de vos infrastructures.
                 </p>
             </div>
         </div>

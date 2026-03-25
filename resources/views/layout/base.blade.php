@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Ewaregroup - solar</title>
+    <title>Ewaregroup</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 {{--    <meta name="viewport" content="width=device-width, initial-scale=1">--}}
@@ -180,6 +180,7 @@
             color: #0c7c34;
         }
 
+
         .reveal-on-scroll {
             opacity: 0;
             transform: translateY(16px);
@@ -221,6 +222,7 @@
     @scroll.window="scrolled = (window.pageYOffset > 50)"
 >
 
+
 <!-- Start-header-Menu-->
 <header
     :class="scrolled ? 'fixed top-3 left-0 right-0 z-50 mx-auto max-w-7xl px-4' : 'fixed top-0 left-0 right-0 z-50 w-full'"
@@ -228,8 +230,8 @@
 >
     <!-- Glassy Navbar -->
     <div
-        :class="scrolled ? 'bg-white/30 backdrop-blur-md rounded-2xl md:rounded-[24px] px-6 py-2 md:px-10 border border-white/20 shadow-xl' : 'bg-transparent px-6 py-4 md:px-16 border-b border-white/10'"
-        class="flex items-center justify-between transition-all duration-300"
+        :class="scrolled ? 'bg-white/30 backdrop-blur-md rounded-2xl md:rounded-[24px] px-6 py-2 md:px-10 border border-white/20 shadow-xl' : 'bg-white/30 backdrop-blur-md px-6 py-4 md:px-16 border-b border-white/10'"
+        class="flex items-center justify-between transition-all duration-300 relative"
     >
 
         <!-- Logo -->
@@ -257,31 +259,35 @@
         </nav>
 
         <!-- CTA Buttons -->
-        <div class="hidden lg:flex items-center ">
-            <a target="_blank" href="https://wa.me/92405748/" class="cta-link flex items-center justify-center px-6 py-2 rounded-full border hover:bg-white/30 transition text-[16px] md:text-[18px]">
+        <div class="hidden lg:flex items-center gap-3">
+            {{-- <a target="_blank" href="https://wa.me/92405748/" class="cta-link flex items-center justify-center px-6 py-2 rounded-full border hover:bg-white/30 transition text-[16px] md:text-[18px]">
                 WhatsApp
+            </a> --}}
+            <a href="https://solsizer-app.ewaregroup.org" class="bg-secondary text-white flex items-center justify-center gap-2 px-6 py-2 rounded-full border border-transparent transition hover:scale-110 shadow-md text-[16px] md:text-[18px]">
+                <i class="fa fa-power-off text-lg md:text-xl"></i>
+                <span>Solsizer</span>
             </a>
-            {{-- <button
-                @click="theme = theme === 'dark' ? 'light' : 'dark'"
-                class="theme-toggle rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center hover:scale-110 shadow-md"
-                aria-label="Basculer le theme"
-            >
-                <i class="fa-solid fa-moon text-lg md:text-xl" x-show="theme === 'light'" x-cloak></i>
-                <i class="fa-solid fa-sun text-lg md:text-xl" x-show="theme === 'dark'" x-cloak></i>
-            </button> --}}
-            <a class="bg-secondary text-white flex items-center justify-center px-6 py-2 rounded-full border md:w-12 md:h-auto transition hover:scale-110 shadow-md">
-                <i class="fa fa-power-off text-lg md:text-xl"></i> Solsizer
+            <a target="_blank" rel="noopener" href="https://eimatafrica.com" class="bg-primary text-white flex items-center justify-center gap-2 px-6 py-2 rounded-full border border-transparent transition hover:scale-110 shadow-md text-[16px] md:text-[18px]">
+                <i class="fa fa-power-off text-lg md:text-xl"></i>
+                EIMAT
             </a>
         </div>
 
         <!-- Mobile Menu Button -->
-        <div class="lg:hidden flex items-center" x-data="{ mobileMenuOpen: false }">
-            <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-black hover:text-primary focus:outline-none">
+        <div class="lg:hidden flex items-center">
+            <button
+                id="mobile-menu-togglebtn"
+                class="text-black hover:text-primary focus:outline-none"
+            >
                 <i class="fas fa-bars text-3xl"></i>
             </button>
 
             <!-- Mobile Menu Dropdown -->
-            <div x-show="mobileMenuOpen" @click.away="mobileMenuOpen = false" class="mobile-menu-panel absolute top-full left-0 right-0 mt-4 backdrop-blur-lg rounded-2xl shadow-xl border p-6 flex flex-col space-y-4" style="display: none;">
+            <div
+                id="mobile-menu-dropdown"
+                class="hidden absolute top-full left-0 right-0 mt-4 backdrop-blur-lg rounded-2xl shadow-xl border p-6 flex flex-col space-y-4 mobile-menu-panel"
+                style="display: none;"
+            >
                 <a href="{{url('/')}}" class="mobile-menu-link text-xl">Accueil</a>
                 <a href="{{url('filiales')}}" class="mobile-menu-link text-xl">Filiales</a>
                 <a href="{{url('services')}}" class="mobile-menu-link text-xl">Nos solutions</a>
@@ -302,6 +308,33 @@
         </div>
     </div>
 </header>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleBtn = document.getElementById('mobile-menu-togglebtn');
+        const dropdown = document.getElementById('mobile-menu-dropdown');
+
+        if(toggleBtn && dropdown) {
+            toggleBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                if (dropdown.style.display === 'none' || dropdown.classList.contains('hidden')) {
+                    dropdown.style.display = 'flex';
+                    dropdown.classList.remove('hidden');
+                } else {
+                    dropdown.style.display = 'none';
+                    dropdown.classList.add('hidden');
+                }
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!dropdown.contains(e.target) && e.target !== toggleBtn) {
+                    dropdown.style.display = 'none';
+                    dropdown.classList.add('hidden');
+                }
+            });
+        }
+    });
+</script>
 <!-- End-header-Menu-->
 
 
@@ -465,10 +498,29 @@
         <!--==================================================-->
         <!-- Start scrollup section Section -->
         <!--==================================================-->
-        <div class="fixed bottom-6 right-6 z-50">
-            <a target="_blank" href="https://wa.me/92405748/" class="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-lg hover:bg-green-800 hover:scale-110 transition duration-300">
-                <i class="fa-brands fa-whatsapp text-3xl"></i>
-            </a>
+        <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+            <div class="flex items-center gap-3">
+                <a target="_blank" href="https://wa.me/92405748/" class="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-lg hover:bg-green-800 hover:scale-110 transition duration-300">
+                    <i class="fa-brands fa-whatsapp text-3xl"></i>
+                </a>
+                <button
+                    @click="theme = theme === 'dark' ? 'light' : 'dark'"
+                    class="theme-toggle rounded-full h-14 w-14 flex items-center justify-center hover:scale-110 shadow-lg transition duration-300"
+                    aria-label="Basculer le theme"
+                >
+                    <i class="fa-solid fa-moon text-lg md:text-xl" x-show="theme === 'light'" x-cloak></i>
+                    <i class="fa-solid fa-sun text-lg md:text-xl" x-show="theme === 'dark'" x-cloak></i>
+                </button>
+            </div>
+            {{-- <div class="flex flex-wrap items-center justify-end gap-2">
+                <a href="{{url('menusolsizer')}}" class="bg-secondary text-white flex items-center justify-center gap-2 px-4 py-2 rounded-full shadow-md text-sm md:text-base transition hover:scale-105">
+                    <i class="fa fa-power-off text-base"></i>
+                    <span>Solsizer</span>
+                </a>
+                <a target="_blank" rel="noopener" href="https://eimatafrica.com" class="bg-primary text-white flex items-center justify-center px-4 py-2 rounded-full shadow-md text-sm md:text-base transition hover:scale-105">
+                    EIMAT
+                </a>
+            </div> --}}
         </div>
         <!--==================================================-->
         <!-- Start scrollup section Section -->

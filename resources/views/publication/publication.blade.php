@@ -126,7 +126,7 @@
             <div class="publication-cta-card reveal-on-scroll">
                 <div>
                     <h3 class="text-[24px] sm:text-[30px] font-semibold">Vous avez une action a valoriser ?</h3>
-                    <p class="text-[15px] sm:text-[17px] opacity-80 mt-3">Nous pouvons documenter vos projets et partager les resultats avec votre reseau.</p>
+                    <p class="publication-cta-text text-[15px] sm:text-[17px] mt-3">Nous pouvons documenter vos projets et partager les resultats avec votre reseau.</p>
                 </div>
                 <a href="{{url('contact')}}" class="inline-flex items-center justify-center px-6 py-3 rounded-[14px] bg-white text-black font-semibold hover:scale-105 transition shadow-lg">
                     Publier avec nous
@@ -159,6 +159,10 @@
         .publication-hero-title,
         .publication-hero-text {
             color: #ffffff;
+        }
+
+        .publication-hero .publication-kicker {
+            color: rgba(255, 255, 255, 0.78);
         }
 
         .publication-shell {
@@ -276,7 +280,7 @@
             background: var(--page-bg);
         }
 
-        .publication-cta-card {
+                .publication-cta-card {
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -284,9 +288,29 @@
             justify-content: space-between;
             padding: 28px 32px;
             border-radius: 24px;
-            background: linear-gradient(120deg, rgba(12, 124, 52, 0.9), rgba(243, 140, 45, 0.85));
-            color: #ffffff;
-            box-shadow: 0 20px 45px rgba(12, 124, 52, 0.35);
+            background: var(--about-card-bg);
+            border: 1px solid var(--about-card-border);
+            box-shadow: 0 18px 36px rgba(0, 0, 0, 0.12);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .publication-cta-card::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(180deg, #0c7c34, #f38c2d);
+        }
+
+        .publication-cta-card h3 {
+            color: var(--page-text);
+        }
+
+                .publication-cta-text {
+            color: var(--page-muted);
         }
 
         @media (min-width: 768px) {
