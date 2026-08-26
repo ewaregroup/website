@@ -66,6 +66,26 @@
                             'email' => 'A renseigner',
                             'address' => 'A renseigner',
                         ],
+                        [
+                            'name' => 'EWARE Mobility',
+                            'logo' => 'assets/images/logo/eware_mobility.svg',
+                            'description' => 'Super-application pour la mobilite (taxi, VTC, zemidjan) et immobilier au Togo.',
+                            'link' => 'https://eware-mobility.ewaregroup.org/',
+                            'is_external' => true,
+                            'phone' => 'A renseigner',
+                            'email' => 'A renseigner',
+                            'address' => 'Lomé, Togo',
+                        ],
+                        [
+                            'name' => 'Solsizer',
+                            'logo' => 'assets/images/logo/SolSizer.png',
+                            'description' => 'Plateforme de dimensionnement et d\'audit pour installations solaires.',
+                            'link' => 'https://solsizer-app.ewaregroup.org',
+                            'is_external' => true,
+                            'phone' => 'A renseigner',
+                            'email' => 'A renseigner',
+                            'address' => 'A renseigner',
+                        ],
                     ];
                 @endphp
 

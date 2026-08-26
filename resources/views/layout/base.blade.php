@@ -241,11 +241,11 @@
         </a>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex items-center space-x-10">
-            <a href="{{url('/')}}" class="nav-link text-[16px] xl:text-[20px] font-medium transition">Accueil</a>
-            <a href="{{url('filiales')}}" class="nav-link text-[16px] xl:text-[20px] font-medium transition">Filiales</a>
-            <a href="{{url('services')}}" class="nav-link text-[16px] xl:text-[20px] font-medium transition">Nos solutions</a>
-            <a href="{{url('publication')}}" class="nav-link text-[16px] xl:text-[20px] font-medium transition">Nos actions</a>
+        <nav class="hidden lg:flex items-center space-x-6 xl:space-x-8">
+            <a href="{{url('/')}}" class="nav-link text-[15px] xl:text-[18px] font-medium transition">Accueil</a>
+            <a href="{{url('filiales')}}" class="nav-link text-[15px] xl:text-[18px] font-medium transition">Filiales</a>
+            <a href="{{url('services')}}" class="nav-link text-[15px] xl:text-[18px] font-medium transition">Nos solutions</a>
+            <a href="{{url('publication')}}" class="nav-link text-[15px] xl:text-[18px] font-medium transition">Nos actions</a>
             {{-- <div class="relative group">
                 <a href="{{url('shop')}}" class="nav-link text-[16px] xl:text-[20px] font-medium transition inline-flex items-center gap-2">
                     Nos actions <i class="fas fa-chevron-down text-xs"></i>
@@ -255,21 +255,25 @@
                     <a href="{{url('publication')}}" class="nav-dropdown-link">Publications</a>
                 </div>
             </div> --}}
-            <a href="{{url('contact')}}" class="nav-link text-[16px] xl:text-[20px] font-medium transition">Contact</a>
+            <a href="{{url('contact')}}" class="nav-link text-[15px] xl:text-[18px] font-medium transition">Contact</a>
         </nav>
 
         <!-- CTA Buttons -->
-        <div class="hidden lg:flex items-center gap-3">
+        <div class="hidden lg:flex items-center gap-2 xl:gap-3">
             {{-- <a target="_blank" href="https://wa.me/92405748/" class="cta-link flex items-center justify-center px-6 py-2 rounded-full border hover:bg-white/30 transition text-[16px] md:text-[18px]">
                 WhatsApp
             </a> --}}
-            <a href="https://solsizer-app.ewaregroup.org" class="bg-secondary text-white flex items-center justify-center gap-2 px-6 py-2 rounded-full border border-transparent transition hover:scale-110 shadow-md text-[16px] md:text-[18px]">
-                <i class="fa fa-power-off text-lg md:text-xl"></i>
+            <a target="_blank" rel="noopener" href="https://solsizer-app.ewaregroup.org" class="bg-secondary text-white flex items-center justify-center gap-2 px-4 xl:px-5 py-2 rounded-full border border-transparent transition hover:scale-105 shadow-md text-[13px] xl:text-[16px] font-medium whitespace-nowrap">
+                <i class="fa fa-power-off text-base xl:text-lg"></i>
                 <span>Solsizer</span>
             </a>
-            <a target="_blank" rel="noopener" href="https://eimatafrica.com" class="bg-primary text-white flex items-center justify-center gap-2 px-6 py-2 rounded-full border border-transparent transition hover:scale-110 shadow-md text-[16px] md:text-[18px]">
-                <i class="fa fa-power-off text-lg md:text-xl"></i>
-                EIMAT
+            <a target="_blank" rel="noopener" href="https://eimatafrica.com" class="bg-primary text-white flex items-center justify-center gap-2 px-4 xl:px-5 py-2 rounded-full border border-transparent transition hover:scale-105 shadow-md text-[13px] xl:text-[16px] font-medium whitespace-nowrap">
+                <i class="fa fa-power-off text-base xl:text-lg"></i>
+                <span>EIMAT</span>
+            </a>
+            <a target="_blank" rel="noopener" href="https://eware-mobility.ewaregroup.org/" class="bg-dark text-white flex items-center justify-center gap-2 px-4 xl:px-5 py-2 rounded-full border border-white/20 transition hover:scale-105 shadow-md text-[13px] xl:text-[16px] font-medium whitespace-nowrap">
+                <i class="fa-solid fa-car text-base xl:text-lg"></i>
+                <span>ewareMobility</span>
             </a>
         </div>
 
@@ -295,6 +299,17 @@
                 <a href="{{url('publication')}}" class="mobile-menu-link text-xl">Publications</a>
                 <a href="{{url('contact')}}" class="mobile-menu-link text-xl">Contact</a>
                 <a target="_blank" href="https://wa.me/92405748/" class="mobile-menu-link text-xl flex items-center"><i class="fa-brands fa-whatsapp mr-2 text-green-500"></i> WhatsApp</a>
+                <div class="pt-3 border-t border-black/10 dark:border-white/10 flex flex-col gap-2">
+                    <a target="_blank" rel="noopener" href="https://solsizer-app.ewaregroup.org" class="bg-secondary text-white flex items-center justify-center gap-2 px-4 py-2.5 rounded-full text-base font-medium shadow-md">
+                        <i class="fa fa-power-off"></i> Solsizer
+                    </a>
+                    <a target="_blank" rel="noopener" href="https://eimatafrica.com" class="bg-primary text-white flex items-center justify-center gap-2 px-4 py-2.5 rounded-full text-base font-medium shadow-md">
+                        <i class="fa fa-power-off"></i> EIMAT
+                    </a>
+                    <a target="_blank" rel="noopener" href="https://eware-mobility.ewaregroup.org/" class="bg-dark text-white flex items-center justify-center gap-2 px-4 py-2.5 rounded-full text-base font-medium shadow-md">
+                        <i class="fa-solid fa-car"></i> ewareMobility
+                    </a>
+                </div>
                 <button
                     @click="theme = theme === 'dark' ? 'light' : 'dark'"
                     class="theme-toggle rounded-xl px-4 py-3 flex items-center justify-between text-base font-medium"

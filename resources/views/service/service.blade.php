@@ -171,21 +171,27 @@
 
             <div class="mt-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                 <a class="solution-entity-card reveal-on-scroll" href="https://eimatafrica.com" target="_blank" rel="noopener">
-                    <div class="solution-entity-icon">EM</div>
+                    <div class="solution-entity-icon">
+                        <img src="{{ url('assets/images/logo/logo_cb.png') }}" alt="Logo EIMAT" class="w-full h-full object-contain p-1">
+                    </div>
                     <h3>EIMAT</h3>
                     <p>Solutions de mobilite electrique, bornes et accompagnement flotte.</p>
                     <span class="solution-entity-link">Visiter le site</span>
                 </a>
-                <a class="solution-entity-card reveal-on-scroll reveal-delay-1" href="https://filiale-industry.example.com" target="_blank" rel="noopener">
-                    <div class="solution-entity-icon">EI</div>
+                <a class="solution-entity-card reveal-on-scroll reveal-delay-1" href="https://eware-mobility.ewaregroup.org/" target="_blank" rel="noopener">
+                    <div class="solution-entity-icon">
+                        <img src="{{ url('assets/images/logo/eware_mobility.svg') }}" alt="Logo EWARE Mobility" class="w-full h-full object-contain p-1">
+                    </div>
                     <h3>EWARE Mobility</h3>
-                    <p>Equipements industriels, installation et maintenance sur mesure.</p>
+                    <p>Super-application de mobilite urbaine, transports et immobilier au Togo.</p>
                     <span class="solution-entity-link">Visiter le site</span>
                 </a>
-                <a class="solution-entity-card reveal-on-scroll reveal-delay-2" href="https://filiale-consulting.example.com" target="_blank" rel="noopener">
-                    <div class="solution-entity-icon">EC</div>
+                <a class="solution-entity-card reveal-on-scroll reveal-delay-2" href="https://solsizer-app.ewaregroup.org" target="_blank" rel="noopener">
+                    <div class="solution-entity-icon">
+                        <img src="{{ url('assets/images/logo/SolSizer.png') }}" alt="Logo Solsizer" class="w-full h-full object-contain p-1">
+                    </div>
                     <h3>Solsizer</h3>
-                    <p>Audit, conseil et pilotage de projets energetiques complexes.</p>
+                    <p>Audit, dimensionnement et pilotage de projets energetiques solaires.</p>
                     <span class="solution-entity-link">Visiter le site</span>
                 </a>
             </div>
